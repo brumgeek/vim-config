@@ -38,3 +38,6 @@
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 	ignore = dirty
+[submodule "bundle/vim-autoswap"]
+	path = bundle/vim-autoswap
+	url = https://github.com/gioele/vim-autoswap.git

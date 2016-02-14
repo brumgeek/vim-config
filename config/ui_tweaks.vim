@@ -1,20 +1,14 @@
 " This file contains adjustments to visual elements of the vim interface.
 
 syntax on                   " Enable syntax highlighting
-if system("uname") == "Linux"
-  colorscheme spacegray
-else
-  colorscheme solarized       " and custom color scheme
-endif
+colorscheme solarized       " and custom color scheme
 set number                  " Show line numbers
+set relativenumber          " 
 set hlsearch                " Highlight search matches
 
-" Softwrap settings: break at word-boundaries and indent with line 1
-set linebreak
-set breakindent
-
-" Set line numbering to relative
-set relativenumber
+" Softwrap settings
+set linebreak               " Break at word boundaries
+set breakindent             " Indent whole paragraph, not just first line
 
 " iTerm2 settings
 if $TERM_PROGRAM =~ "iTerm"

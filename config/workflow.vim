@@ -6,6 +6,13 @@ if &viminfo !~ ',n'
   let &viminfo .= ',n'.fnamemodify(expand("$MYVIMRC"),":p:h").'/viminfo'
 endif
 
+if has('persistent_undo')
+    set undolevels=5000
+    " let vimundo=fnamemodify(expand("$MYVIMRC"),":p:h").'/vimundo'
+    let &undodir = fnamemodify(expand("$MYVIMRC"),":p:h").'/vimundo'
+    set undofile
+endif
+
 filetype plugin indent on    " Enable filetype detection, then
                              " autoload corresponding plugins and
                              " indent.vim file
@@ -20,3 +27,4 @@ cabbr <expr> %% expand('%:p:h')
 
 " Force .md file extension to Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+

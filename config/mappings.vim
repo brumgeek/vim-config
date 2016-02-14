@@ -8,11 +8,10 @@ set wildcharm=<C-z>
 " $MYVIMRC source/edit
 if has('unix')
   nnoremap <Leader>ev :e $HOME/.vim/config/
-  nnoremap <Leader>sv :source $MYVIMRC<CR>
 elseif has('win32')
   nnoremap <Leader>ev :e $HOMEPATH\vimfiles\config\
-  nnoremap <Leader>sv :source $MYVIMRC \| source $MYGVIMRC<CR>
 endif
+nnoremap <Leader>sv :source $MYVIMRC \| source $MYGVIMRC<CR>
 
 " TEXT MANIPULATION
 " <C-h> = <Backspace>, so...
@@ -93,4 +92,7 @@ inoremap <Left> <C-o><Backspace>
 inoremap <Right> <C-o><Space>
 xnoremap <Left> <Backspace>
 xnoremap <Right> <Space>
+
+" Switch from Search to Replace super fast!
+" nmap <expr> M ':%s/' . @/ . '//g<LEFT><LEFT>'
 
