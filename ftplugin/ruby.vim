@@ -1,1 +1,1 @@
-nnoremap <Leader>x :!ruby %<CR>
+nnoremap <Leader>x :w <bar> !ruby %<CR>

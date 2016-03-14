@@ -18,11 +18,7 @@ set smartcase
 " else
 "     :cd $HOME/
 " endif
-if has('win32')
-  :cd $HOMEPATH/Dropbox
-elseif has('unix')
-  :cd $HOME/Dropbox/
-else
-  :cd $HOME/
-endif
+
+" Set _ as a word boundary
+:set iskeyword-=_
 

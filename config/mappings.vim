@@ -63,18 +63,25 @@ vnoremap <Leader>w <C-c>:update<CR>gv
 
 " Switching Buffers
 " nnoremap <Leader>b :buffer <C-z><S-Tab>
-nnoremap <Leader>b :ls<CR>:b
+nnoremap <Leader>bl :ls<CR>:b
+nnoremap <Leader>bp :bp<CR>
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bd :b#<bar>bd#<CR>
 
-" WINDOW MANAGEMENT
+" UI & WINDOW MANAGEMENT
 " Set width for Split Screen in El Capitan
-nnoremap <Leader>ss :set columns=95<CR>:sleep 15m<CR><C-L>
+if has('gui_macvim')
+  nnoremap <Leader>ss :set columns=95<CR>:sleep 15m<CR><C-L>
+endif
+
+" Enable full-screen on Windows
+if has('win32')
+  map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+endif
 
 " One-press window switching
 nnoremap <Tab> <C-w>w
 nnoremap <S-Tab> <C-w>W
-
-" UI
-nnoremap <Leader>zi :set guifont=Consolas:h24<CR>
 
 " NAVIGATION
 " Up/down keys navigate screen lines, rather than file lines

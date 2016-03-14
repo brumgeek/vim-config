@@ -1,8 +1,12 @@
 " Set font
-if has('mac')
-  set guifont=Consolas:h18
+if has('gui_macvim')
+  if hostname() =~ "sardanapalus"
+    set guifont=Source\ Code\ Pro\ Light:h19
+  else
+    set guifont=Source\ Code\ Pro\ Light:h18
+  endif
 elseif has('win32')
-  set guifont=Consolas:h15
+  set guifont=Source\ Code\ Pro\ Light:h18
 endif
 
 " Fix UTF-8 menu encoding problem on Windows systems localized to Chinese (Traditional)
@@ -18,8 +22,8 @@ set guioptions=
 " Set window size
 set lines=999 columns=85
 
-" Set light background
-set background=light
+" Set color scheme variant
+set background=dark
 
 " Remap <M-Space> to Windows system menu, add <C-n> shortcut to minimize
 if has('win32')
