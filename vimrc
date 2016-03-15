@@ -9,7 +9,8 @@ let config_list = [
   \ 'plugins/*.vim',
   \ 'workflow.vim',
   \ 'ui_tweaks.vim',
-  \ 'misc.vim'
+  \ 'misc.vim',
+  \ 'machine_specific.vim'
 \]
 
 for files in config_list

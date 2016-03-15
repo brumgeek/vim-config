@@ -17,10 +17,17 @@
 $needs
 
 # Command Line History (newest to oldest):
+:bd
+:e /Users/rlue/.vim/config/workflow.vim
+:e /Users/rlue/.vim/config/machine_specific.vim
 :e /Users/rlue/.vim/config/misc.vim
+:e /Users/rlue/.vim/config/mappings.vim
+:e /Users/rlue/.vim/vimrc
+:bd!
+:sp /Users/rlue/.vim/config/misc.vim
+:e /Users/rlue/.vim/config/ui_tweaks.vim
 :colorscheme solarized
 :colorscheme spacegray
-:e /Users/rlue/.vim/config/ui_tweaks.vim
 :pwd
 :sav Work/THAT/Marketing/Copy/Press\ Releases/2016-03-14\ Post-IHA-Show.md
 :!mkdir Work/THAT/Marketing/Copy/Press\ Releases
@@ -28,7 +35,6 @@ $needs
 :set bg=light
 :set filetype=markdown
 :e Work/THAT/Marketing/Copy/Packaging/ThawTHAT-Deluxe.md
-:bd
 :e Notes/Research\ Notes/Marketing.md
 :h Ctrlp
 :e /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Packaging/SpreadTHAT-Deluxe.md
@@ -49,7 +55,6 @@ $needs
 :%s/unpaired_santas/participants_without_receivers
 :sp /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Packaging/ThawTHAT-Deluxe.md
 :!rm -rf Work/THAT/Marketing/Copy/Packaging/Deluxe/
-:bd!
 :e /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Packaging/ScoopTHAT-Deluxe.md
 :sp /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Packaging/Deluxe/Thaw.md
 :sp /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Packaging/Deluxe/Spread.md
@@ -100,7 +105,6 @@ $needs
 :b
 :map <Leader>d
 :set gui
-:e /Users/rlue/.vim/config/mappings.vim
 :bd#
 :b#
 :bd6
@@ -177,7 +181,6 @@ $needs
 :set updatecount?
 :set updatecoutn?
 :h updatecount
-:e /Users/rlue/.vim/config/workflow.vim
 :set undodir?
 :echo vimundo
 :echo undodir
@@ -1014,9 +1017,6 @@ $needs
 :e /Users/rlue/Dropbox/src/ruby/9.5.1-improved-ask-method.rb
 :e /Users/rlue/Dropbox/src/ruby/9.4.1-say-moo-return.rb
 :Q
-:e ~/Projects/brix.git/SSDT-HACK.dsl
-:e ~/Projects/brix.git/makefile
-:e 8.3.2-table-of-contents-revisited.rb
 
 # Search String History (newest to oldest):
 ?/mark
@@ -1325,9 +1325,33 @@ $needs
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	, THAT! Inventions
+"0	LINE	0
+	  \ 'misc.vim'
 ""1	LINE	0
+	" Set machine-specific default working directory
+	" if has('win32')
+	"   if $COMPUTERNAME == "ODALISQUE"
+	"     :cd $HOMEPATH/Dropbox
+	"   endif
+	" elseif has('unix')
+	"   if hostname() =~ "liberte"
+	"     :cd $HOME/Dropbox/
+	"   elseif hostname() =~ "sardanapalus"
+	"     :cd $HOME/Dropbox/Work
+	"   endif
+	" else
+	"     :cd $HOME/
+	" endif
+	
+"2	LINE	0
+	  set bg=dar
+"3	LINE	0
+	if hostname() =~ "porphyrion"
+	  set bg=dark
+	endif
+"4	LINE	0
+	if 
+"5	LINE	0
 	" if has('win32')
 	"   :cd $HOMEPATH/Dropbox
 	" elseif has('unix')
@@ -1335,28 +1359,18 @@ $needs
 	" else
 	"   :cd $HOME/
 	" endif
-"2	LINE	0
+"6	LINE	0
 	new products:
 	
-"3	LINE	0
+"7	LINE	0
 	* FreezTHAT!
 	* FreezTHAT! Cubes
 	* ChillTHAT! Platter
 	
-"4	LINE	0
-	* ScoopTHAT! Li'l Dipper
-"5	LINE	0
-	* ScoopTHAT! Deluxe
-"6	LINE	0
-	* CoolTHAT!
-"7	LINE	0
-	* HeatTHAT! Tea Set
 "8	LINE	0
-	tell them what they want to hear!
-	
+	* ScoopTHAT! Li'l Dipper
 "9	LINE	0
-	remember the question: not ‘what does it do?’ but ‘how nice is it?’
-	
+	* ScoopTHAT! Deluxe
 "a	CHAR	0
 	
 "c	CHAR	0
@@ -1385,27 +1399,41 @@ $needs
 	
 	
 "-	CHAR	0
-	, THAT! Inventions
+	isc
 
 # global variables:
 
 # File marks:
-'0  21  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
-'1  4  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
-'2  13  35  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
-'3  37  19  ~/Dropbox/Notes/Research Notes/Marketing.md
-'4  2  0  ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/SpreadTHAT-Deluxe.md
-'5  1  38  ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/SpreadTHAT-Deluxe.md
-'6  17  55  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/Vagrantfile
-'7  3  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/bootstrap.sh
-'8  17  56  ~/Downloads/vagrant/Vagrantfile
-'9  16  49  ~/Downloads/vagrant/Vagrantfile
+'0  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
+'1  13  20  ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
+'2  3  20  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
+'3  2  20  ~/Dropbox/Backup/Unix/rlue/.lftp/rc
+'4  1  9  ~/.ssh/config
+'5  1  42  ~/Dropbox/Backup/Unix/rlue/.lftp/bookmarks
+'6  7  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
+'7  4  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
+'8  13  35  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
+'9  37  19  ~/Dropbox/Notes/Research Notes/Marketing.md
 
 # Jumplist (newest first):
--'  21  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
+-'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
 -'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
--'  4  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
+-'  7  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
+-'  6  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
+-'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/workflow.vim
+-'  105  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+-'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+-'  13  20  ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
+-'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
+-'  3  20  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
+-'  5  2  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
 -'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
+-'  2  20  ~/Dropbox/Backup/Unix/rlue/.lftp/rc
+-'  3  0  ~/Dropbox/Backup/Unix/rlue/.lftp/rc
+-'  1  9  ~/.ssh/config
+-'  5  0  ~/.ssh/config
+-'  1  42  ~/Dropbox/Backup/Unix/rlue/.lftp/bookmarks
+-'  4  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
 -'  13  35  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
 -'  1  0  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
 -'  9  294  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
@@ -1480,35 +1508,117 @@ $needs
 -'  70  30  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
 -'  71  7  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
 -'  114  16  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  135  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  113  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  112  2  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  1  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  45  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  137  4  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  130  40  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  129  33  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  120  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  100  18  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  116  19  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  102  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  132  53  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  96  23  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  127  51  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
--'  13  35  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  1  0  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
 
 # History of marks within files (newest to oldest):
 
+> ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+	"	105	0
+	^	95	2
+	.	67	33
+	+	11	0
+	+	13	0
+	+	14	0
+	+	95	13
+	+	94	42
+	+	95	1
+	+	77	0
+	+	67	33
+
 > ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
-	"	21	0
-	.	21	0
-	+	22	26
-	+	23	16
-	+	21	0
+	"	1	0
+	.	7	0
+	+	7	26
+	+	8	16
+	+	7	0
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
+	"	1	0
+	^	3	21
+	.	6	0
+	+	2	0
+	+	1	29
+	+	3	20
+	+	6	0
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/config/workflow.vim
+	"	1	0
+	.	30	0
+	+	31	0
+	+	31	21
+	+	31	11
+	+	31	0
+	+	31	0
+	+	31	0
+	+	31	0
+	+	20	0
+	+	20	72
+	+	20	23
+	+	20	8
+	+	20	0
+	+	20	0
+	+	20	0
+	+	20	0
+	+	8	0
+	+	20	0
+	+	9	0
+	+	31	25
+	+	13	16
+	+	31	0
+	+	30	0
+	+	13	0
+	+	11	0
+	+	31	0
+	+	9	1
+	+	10	0
+	+	9	0
+	+	12	16
+	+	10	20
+	+	12	0
+	+	10	19
+	+	11	16
+	+	12	0
+	+	11	5
+	+	12	18
+	+	30	0
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
+	"	13	20
+	^	13	21
+	.	13	20
+	+	13	20
 
 > ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
-	"	4	0
+	"	1	1
+	.	5	0
+	+	5	4
+	+	5	27
+	+	5	0
+
+> ~/Dropbox/Backup/Unix/rlue/.lftp/rc
+	"	2	20
+	^	2	21
+	.	2	19
+	+	3	26
+	+	4	24
+	+	2	19
+	+	1	23
+	+	2	19
+
+> ~/.ssh/config
+	"	1	9
+	^	1	13
+	.	2	0
+	+	2	35
+	+	1	6
+	+	3	28
+	+	4	24
+	+	2	0
+
+> ~/Dropbox/Backup/Unix/rlue/.lftp/bookmarks
+	"	1	42
+	^	1	43
+	.	1	42
+	+	1	42
 
 > ~/ControlP
 	"	10	0
@@ -2066,13 +2176,6 @@ $needs
 	+	1	10
 	+	4	0
 
-> ~/Dropbox/Backup/Unix/rlue/.lftp/rc
-	"	2	24
-	^	2	25
-	.	2	24
-	+	1	26
-	+	2	24
-
 > ~/.netrc
 	"	3	10
 	^	3	29
@@ -2590,19 +2693,6 @@ $needs
 	.	1	26
 	+	1	26
 
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
-	"	1	0
-	^	95	2
-	.	67	33
-	+	11	0
-	+	13	0
-	+	14	0
-	+	95	13
-	+	94	42
-	+	95	1
-	+	77	0
-	+	67	33
-
 > ~/Dropbox/src/ruby/elm-city-craftworks/course-001/PART_1.md
 	"	86	3
 	^	63	4
@@ -2962,61 +3052,8 @@ $needs
 > /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/quickfix.txt
 	"	518	14
 
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/workflow.vim
-	"	30	0
-	.	30	0
-	+	31	0
-	+	31	21
-	+	31	11
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	20	0
-	+	20	72
-	+	20	23
-	+	20	8
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	8	0
-	+	20	0
-	+	9	0
-	+	31	25
-	+	13	16
-	+	31	0
-	+	30	0
-	+	13	0
-	+	11	0
-	+	31	0
-	+	9	1
-	+	10	0
-	+	9	0
-	+	12	16
-	+	10	20
-	+	12	0
-	+	10	19
-	+	11	16
-	+	12	0
-	+	11	5
-	+	12	18
-	+	30	0
-
 > ~/Dropbox/Backup/UI/solarized/vim-colors-solarized/autoload/togglebg.vim
-	"	1	0
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
 	"	1	0
 
 > /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/undo.txt
 	"	252	0
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/visual.txt
-	"	109	21
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/repeat.txt
-	"	47	6
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/various.txt
-	"	87	6
