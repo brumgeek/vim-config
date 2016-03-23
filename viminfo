@@ -8,35 +8,108 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/mark
+~MSle0/light-gray
 
 # Last Substitute Search Pattern:
-~MSle0&unassigned
+~MSle0~&#{@base_title}
 
 # Last Substitute String:
-$needs
+$full_title("")
 
 # Command Line History (newest to oldest):
+:%s/#{@base_title}/full_title("")/g
+:e test/controllers/static_pages_controller_test.rb
+:e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/application_helper.rb
+:e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/static_pages_controller.rb
+:e app/controllers/application_controller.rb
+:sp /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+:e config/routes.rb
+:e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+:e app/views/users/new.html.erb
+:e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/home.html.erb
+:e 
+:b3
+:b4
+:b1
+:e  
+:e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+:e app/views/layouts/_footer.html.erb
+:e app/views/layouts/_header.html.erb
+:sav! /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+:sav /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+:sav /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/contact.html.erb
+:e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+:e app/controllers/static_pages_controller.rb
+:e app/views/layouts/application.html.erb
+:%s/light-gray/gray-light/g
+:e app/assets/stylesheets/custom.css.scss
+:e /Users/rlue/.vim/config/mappings.vim
+:echo has('gvim')
+:echo has('gui_running')
+:e ~/.vim/gvimrc
 :bd
+:q
+:h q:
+:.,$s/#777/$light-gray/g
+:h [range]
+:h :s
+:%s/#777/
+:h z.
+:e app/views/static_pages/home.html.erb
+:sp app/views/layouts/application.html.erb
+:w!
+:e ~/.vim/bundle/vim-autoswap/README.md
+:e
+:echo v:swapchoice
+:let v:swapchoice=''
+:h v:swapchoice
+:e Dropbox/Notes/Planning/diy-dropbox.md
+:sp /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+:sp /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/help.html.erb
+:e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/help.html.erb
+:set filetype=markdown
+:set bg=light
+:set bg=dark
+:e Dropbox/Public/html/reddit/AndroidManifest.xml
+:e Downloads/AndroidManifest.xml
+:sav! Dropbox/Notes/Planning/remodel.md
+:sav Dropbox/Notes/Planning/remodel.md
+:bd2
+:vsp Dropbox/Notes/Planning/remodel.md
+:h 'g:ctrlp_regexp'
+:h CTRL_O
+:h <C-O>
+:h <C-0>
+:<C-0>
+:h <C-o>
+:h )
+:h }
+:h |
+:tabnew
+:set fo?
+:set formatoptions-=m
+:set formatoptions+=m
+:h !
+:%s/.	/. /g
+:pwd
+:h Ctrlp
+:e Dropbox/Work/THAT/Marketing/Copy/Design\ Awards/2016/
+:set bg=linght
+:e Dropbox/Notes/Research\ Notes/Programming.md
 :e /Users/rlue/.vim/config/workflow.vim
 :e /Users/rlue/.vim/config/machine_specific.vim
 :e /Users/rlue/.vim/config/misc.vim
-:e /Users/rlue/.vim/config/mappings.vim
 :e /Users/rlue/.vim/vimrc
 :bd!
 :sp /Users/rlue/.vim/config/misc.vim
 :e /Users/rlue/.vim/config/ui_tweaks.vim
 :colorscheme solarized
 :colorscheme spacegray
-:pwd
 :sav Work/THAT/Marketing/Copy/Press\ Releases/2016-03-14\ Post-IHA-Show.md
 :!mkdir Work/THAT/Marketing/Copy/Press\ Releases
 :sp work/that/Marketing/Copy/Packaging/ChillTHAT-Platter.md
-:set bg=light
-:set filetype=markdown
 :e Work/THAT/Marketing/Copy/Packaging/ThawTHAT-Deluxe.md
 :e Notes/Research\ Notes/Marketing.md
-:h Ctrlp
 :e /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Packaging/SpreadTHAT-Deluxe.md
 :e work/THAT/Marketing/Copy/Packaging/ThawTHAT-Deluxe.md
 :e /Users/rlue/Downloads/vagrant/foo.md
@@ -44,9 +117,7 @@ $needs
 :e ../.pryrc
 :q!
 :e ~/.pryrc
-:q
 :reg
-:e 
 :e /Users/rlue/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
 :%s/unassigned/needs/g
 :set iskeyword?
@@ -63,7 +134,6 @@ $needs
 :tabe
 :sav ~/Downloads/test
 :e ~/src/ruby/elm-city-craftworks/course-001/samples/part1/bin/ruby-ls
-:tabnew
 :e src/ruby/ruby-quiz/002-secret-santas.rb
 :%s/.stat/.lstat/gc
 :w
@@ -73,7 +143,6 @@ $needs
 :e Notes/Tutoring/Small-Group.md
 :e Notes/Tutoring/English.txt
 :e Notes/Tutoring/Planning.md
-:set bg=dark
 :h CTRL-W_r
 :h windows
 :h <C-w>r
@@ -87,7 +156,6 @@ $needs
 :e Notes/Research\ Notes/Programming.md
 :e src/ruby/elm-city-craftworks/course-001/samples/part1/whiteboard.md
 :set ft=markdown
-:e
 :e \Users\rlue\vimfiles\gvimrc
 :set guifont=Source\ Code\ Pro\ Light:h19
 :set guifont=Source\ Code\ Pro\ Light:h18
@@ -141,7 +209,6 @@ $needs
 :e Work/THAT/Marketing/Copy/Packaging/ScoopTHAT-Lil-Dipper.md
 :h <Enter>
 :e Work/THAT/Marketing/Strategy/SEO/0-Proposal.md
-:bd2
 :e /Users/rlue/Dropbox/Notes/Research\ Notes/Marketing.md
 :e Work/THAT/Marketing/Strategy/SEO/
 :e Work/THAT/Marketing/Strategy/0-Prelim.md Work/THAT/Marketing/Strategy/2016-EC-Proposal.md Work/THAT/Marketing/Strategy/Media-Outreach.md Work/THAT/Marketing/Strategy/Reviewers.md
@@ -184,7 +251,6 @@ $needs
 :set undodir?
 :echo vimundo
 :echo undodir
-:b1
 :h :next
 :set undodir
 :set undofile?
@@ -395,7 +461,6 @@ $needs
 :bd5
 :bd 3
 :CtrlPBuffer
-:b4
 :bd 8
 :buffer ~/Dropbox/Work/Copy/Sell\ Sheets/CoolTHAT.md
 :e $HOME/.vim/config/bin
@@ -454,7 +519,6 @@ $needs
 :%s/US/US%/gc
 :NT/NT$/gc
 :%s/NT/NT$/gc
-:h :s
 :e ../Downloads/vanny.srt
 :dig
 :e /Users/rlue/Dropbox/Notes/Tutoring/Lessons/01\ -\ Introduction.md
@@ -665,7 +729,6 @@ $needs
 :sav SquareX/Its\ Time\ To\ Live\ Better.md
 :e SquareX/Its\ Time\ To\ Live\ Better.txt
 :h q
-:b3
 :set filetype=javascript
 :set filetype=js
 :e swap
@@ -880,7 +943,6 @@ $needs
 :e Copy/Manuals/ChillTHAT-Platter.md
 :mi
 :w Copy/Misc/IHA-2016.md
-:w!
 :vsp .mail/signature.html
 :e .mail/signature.html
 :vsp Thunderbird\ Config/signature.html
@@ -955,73 +1017,39 @@ $needs
 :!mkdir Notes/The\ Hideout
 :e Notes/
 :e Copy/Website/products/heatdip.md
-:vsp Copy/Packaging/HeatTHAT-Sake.md
-:sav /Users/rlue/Dropbox/Work/Copy/Website/products/heatsake.md
-:w Copy/Misc/iF\ 2016/Flow.md
-:e copy/Packaging/SpreadTHAT-Breakfast-Set.md
-:e Copy/Manuals/ChillTHAT-Salad-Bowl.md
-:e /Users/rlue/Dropbox/Work/Copy/Packaging/ChillTHAT-Salad-Bowl.md
-:e /Users/rlue/Dropbox/Work/Copy/Website/products/
-:sav /Users/rlue/Dropbox/Work/Copy/Packaging/ChillTHAT-Mini.md
-:e Copy/Packaging/ChillTHAT-Platter.md
-:w /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/HeatTHAT-Sake.md
-:w /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/HeatTHAT-Dip.md
-:sav /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/HeatTHAT-Gravy.md
-:/Users/rlue/Dropbox/Work/Copy/Sell Sheets/
-:sav /Users/rlue/Dropbox/Work/Copy/Sell Sheets/HeatTHAT-Gravy.md
-:e Copy/Sell\ Sheets/ChillTHAT-Ice-Cream-Maker.md
-:;;;;;
-:e /Users/rlue/Dropbox/Work/Copy/Manuals/ChillTHAT-Salad-Bowl.md
-:e /Users/rlue/Dropbox/Work/Copy/Website/products/scoopii.md
-:vsp Copy/Website/products/chill-mini.md
-:w Copy/Sell\ Sheets/2016-Catalog-Overview.md
-:sp /etc/hosts
-:tabd
-:tabn
-:!less /Users/rlue/Dropbox/src/ruby/11.4.1-YAML.txt
-:e /Users/rlue/Dropbox/src/ruby/11.4.1-YAML.rb
-:cd ../
-:so ~/.vim/bundle/NERD_commenter/plugin/NERD_commenter.vim
-:so 
-:sav 10.5.1-expanded-english.number.rb
-:cd ../src/ruby/
-:cd ../src/ruby/10.5.1-expanded-english-number.rb
-:e /Users/rlue/.vim/ftplugin/ruby\ (liberte\'s\ conflicted\ copy\ 2015-10-05).vim
-:e /Users/rlue/Dropbox/src/ruby/10.2.3-sort-capitals.rb
-:e /Users/rlue/Dropbox/src/ruby/10.2.1-sort.rb
-:sp /Users/rlue/Movies/Film/White\ God\ 2014\ HUNGARI\ 1080p\ BRRip\ x264\ DTS-JYK/English(SDH).srt
-:cd ~/Dropbox/
-:cd 
-:e ../src/ruby/10.1.1-factorials.rb
-:.!
-:!ruby %
-:e ../src/ruby/10.2.1-sort.rb
-:set columns=85
-:set columns
-:set width=72
-:e 7.5.4-leap-years.rb
-:e 7.5.3-deaf-grandma-extended.rb
-:e 7.5.2-deaf-grandma.rb
-:e 7.5.1-99-bottles.rb
-:e 6.2.1-angry-boss.rb
-:e ../ruby/5.6.1-full-name-greeting.rb
-:e 10.2.1-sort.rb
-:e fibonacci.rb
-:e 10.1.2-continent-areas.rb
-:sav ~/src/ruby/10.1.1-factorials.rb
-:!ln -s ~/Dropbox/src/ ~/
-:set filetype=ruby
-:e ~/Dropbox/Notes/Scratch.txt
-:sav 9.5.3-modern-roman-numerals.rb
-:e /Users/rlue/Dropbox/src/ruby/9.5.2-old-school-roman-numerals.rb
-:e /Users/rlue/Dropbox/src/ruby/9.5.1-improved-ask-method.rb
-:e /Users/rlue/Dropbox/src/ruby/9.4.1-say-moo-return.rb
-:Q
 
 # Search String History (newest to oldest):
+? #{@base_title}
+? light-gray
+? #777
+?/#logo
+?/hover
+? \$\(cursor\|select\)\$
+?/center
+?/bootstrap
+?/:test
+?/production
+?/development
+?/sqlit
+?/sqlite
+?/12factor
+?/com.
+?/ocr
+?/oocr
+?/intent
+?/intent-
+?/intent-filter
+?/raw: "com.pleco.chinesesystem.doscreenocractivity
+? \<intent\>
+?/intent filter
+?/'
+? \<a\>
+? =
+? .	
+?/create
+?/directo
 ?/mark
 ?/root
-?/sqlite
 ?/coffe
 ?/uglifier
 ?/sass
@@ -1059,7 +1087,6 @@ $needs
 ? \<asdf\>
 ?/asdf
 ? \<def\>
-? \$\(cursor\|select\)\$
 ?/keyword-
 ?/mozbar
 ?/leader
@@ -1150,7 +1177,6 @@ $needs
 ?/shore
 ?/competent
 ? competent
-?/'
 ?/"r”
 ?/interpretor
 ?/<i>
@@ -1325,52 +1351,44 @@ $needs
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	  \ 'misc.vim'
-""1	LINE	0
-	" Set machine-specific default working directory
-	" if has('win32')
-	"   if $COMPUTERNAME == "ODALISQUE"
-	"     :cd $HOMEPATH/Dropbox
-	"   endif
-	" elseif has('unix')
-	"   if hostname() =~ "liberte"
-	"     :cd $HOME/Dropbox/
-	"   elseif hostname() =~ "sardanapalus"
-	"     :cd $HOME/Dropbox/Work
-	"   endif
-	" else
-	"     :cd $HOME/
-	" endif
+""0	LINE	0
+	    assert_equal full_title, "Ruby on Rails Tutorial Sample App"
+"1	LINE	0
+	  def setup
+	    @base_title = "Ruby on Rails Tutorial Sample App"
+	  end
 	
 "2	LINE	0
-	  set bg=dar
+	  def setup
+	    @base_title = "Ruby on Rails Tutorial Sample App"
+	  end
+	
 "3	LINE	0
-	if hostname() =~ "porphyrion"
-	  set bg=dark
-	endif
+	    assert_response :success
 "4	LINE	0
-	if 
+	  def setup
+	    @base_title = "Ruby on Rails Tutorial Sample App"
+	  end
+	
 "5	LINE	0
-	" if has('win32')
-	"   :cd $HOMEPATH/Dropbox
-	" elseif has('unix')
-	"   :cd $HOME/Dropbox/
-	" else
-	"   :cd $HOME/
-	" endif
+	  test "should get new" do
+	    get :new
+	    assert_response :success
+	    assert_select "title", "Sign Up | #{@base_title}"
+	  end
+	
 "6	LINE	0
-	new products:
-	
+	    assert_select "a[href=?]", root_path, count: 2
+	    assert_select "a[href=?]", help_path
+	    assert_select "a[href=?]", about_path
+	    assert_select "a[href=?]", contact_path
+	  end
 "7	LINE	0
-	* FreezTHAT!
-	* FreezTHAT! Cubes
-	* ChillTHAT! Platter
-	
+	    assert_template 'static_pages/home'
 "8	LINE	0
-	* ScoopTHAT! Li'l Dipper
+	    get :new
 "9	LINE	0
-	* ScoopTHAT! Deluxe
+	    test "should get new" do
 "a	CHAR	0
 	
 "c	CHAR	0
@@ -1399,130 +1417,901 @@ $needs
 	
 	
 "-	CHAR	0
-	isc
+	[O
 
 # global variables:
 
 # File marks:
-'0  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
-'1  13  20  ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
-'2  3  20  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
-'3  2  20  ~/Dropbox/Backup/Unix/rlue/.lftp/rc
-'4  1  9  ~/.ssh/config
-'5  1  42  ~/Dropbox/Backup/Unix/rlue/.lftp/bookmarks
-'6  7  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
-'7  4  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
-'8  13  35  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
-'9  37  19  ~/Dropbox/Notes/Research Notes/Marketing.md
+'0  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
+'1  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323043518_create_users.rb
+'2  6  50  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/helpers/application_helper_test.rb
+'3  25  45  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+'4  19  47  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+'5  10  25  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/test_helper.rb
+'6  4  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+'7  4  34  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+'8  12  28  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+'9  3  38  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
 
 # Jumplist (newest first):
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
--'  7  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
--'  6  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/workflow.vim
--'  105  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
--'  13  20  ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
--'  3  20  ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
--'  5  2  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
--'  2  20  ~/Dropbox/Backup/Unix/rlue/.lftp/rc
--'  3  0  ~/Dropbox/Backup/Unix/rlue/.lftp/rc
--'  1  9  ~/.ssh/config
--'  5  0  ~/.ssh/config
--'  1  42  ~/Dropbox/Backup/Unix/rlue/.lftp/bookmarks
--'  4  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
--'  13  35  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  1  0  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  9  294  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  7  182  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  14  3  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  2  0  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  5  245  ~/Dropbox/Work/THAT/Marketing/Copy/Press Releases/2016-03-14 Post-IHA-Show.md
--'  37  19  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  1  0  ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/ThawTHAT-Deluxe.md
--'  19  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  17  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  14  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  12  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  10  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  8  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  6  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  3  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  1  0  ~/Dropbox/Notes/Research Notes/Marketing.md
--'  2  0  ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/SpreadTHAT-Deluxe.md
--'  541  7  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  403  16  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  676  69  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  308  17  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  307  17  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  304  35  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  201  19  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  200  35  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  199  30  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  198  70  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  48  63  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  2  0  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
--'  1  38  ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/SpreadTHAT-Deluxe.md
--'  3  0  ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/ThawTHAT-Deluxe.md
--'  17  55  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/Vagrantfile
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/Vagrantfile
--'  3  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/bootstrap.sh
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/bootstrap.sh
--'  17  56  ~/Downloads/vagrant/Vagrantfile
--'  1  0  ~/Downloads/vagrant/Vagrantfile
--'  16  49  ~/Downloads/vagrant/Vagrantfile
--'  9  0  ~/Downloads/vagrant/bootstrap.sh
--'  1  0  ~/Downloads/vagrant/bootstrap.sh
--'  1  21  ~/Downloads/vagrant/foo.md
--'  1  0  ~/Downloads/vagrant/foomd
--'  15  37  ~/Downloads/vagrant/Vagrantfile
--'  7  20  ~/Dropbox/src/rails/hello_app/config/routes.rb
--'  6  0  ~/Dropbox/src/rails/hello_app/config/routes.rb
--'  1  0  ~/Dropbox/src/rails/hello_app/config/routes.rb
--'  11  38  ~/Dropbox/src/rails/hello_app/app/controllers/application_controller.rb
--'  1  0  ~/Dropbox/src/rails/hello_app/app/controllers/application_controller.rb
--'  1  0  ~/Downloads/diff2
--'  1  0  ~/Downloads/diff1
--'  7  32  ~/Dropbox/Notes/explore-vim.md
--'  1  0  ~/Dropbox/Notes/explore-vim.md
--'  326  0  ~/.rbenv/versions/2.0.0-p645/lib/ruby/2.0.0/pp.rb
--'  327  0  ~/.rbenv/versions/2.0.0-p645/lib/ruby/2.0.0/pp.rb
--'  1  0  ~/.rbenv/versions/2.0.0-p645/lib/ruby/2.0.0/pp.rb
--'  1  64  ~/.pryrc
--'  8  11  ~/.bash_profile
--'  1  0  ~/.bash_profile
--'  1  0  ~/.bashrc
--'  9  0  ~/Dropbox/src/ruby/pine-learn-to-program/14.4.2-grandfather-clock.rb
--'  1  0  ~/Dropbox/src/ruby/pine-learn-to-program/14.4.2-grandfather-clock.rb
--'  10  0  ~/Dropbox/src/ruby/pine-learn-to-program/14.4.3-program-logger.rb
--'  11  0  ~/Dropbox/src/ruby/pine-learn-to-program/14.4.3-program-logger.rb
--'  1  0  ~/Dropbox/src/ruby/pine-learn-to-program/14.4.3-program-logger.rb
--'  106  57  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  1  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  130  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  134  0  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  70  30  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  71  7  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
--'  114  16  ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas/secret-santas.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323043518_create_users.rb
+-'  6  50  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/helpers/application_helper_test.rb
+-'  9  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/helpers/application_helper_test.rb
+-'  25  45  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  7  37  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/application_helper.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/static_pages_controller.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/application_controller.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+-'  19  47  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  10  25  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/test_helper.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/test_helper.rb
+-'  4  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  18  13  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  16  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  15  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  4  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  13  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  3  26  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
+-'  8  40  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/home.html.erb
+-'  8  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  12  28  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  3  38  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  14  37  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  8  7  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  7  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  6  15  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  9  7  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  2  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  10  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  8  33  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_footer.html.erb
+-'  6  33  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  1  20  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  5  10  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  11  3  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  4  29  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  11  12  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/static_pages_controller.rb
+-'  22  19  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  21  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  28  19  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  16  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  89  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/assets/stylesheets/custom.css.scss
+-'  8  33  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_footer.html.erb
+-'  1  20  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  5  10  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  11  3  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  4  29  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  89  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/assets/stylesheets/custom.css.scss
+-'  8  33  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_footer.html.erb
+-'  1  20  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  5  10  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  11  3  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  4  29  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  89  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/assets/stylesheets/custom.css.scss
+-'  8  33  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_footer.html.erb
+-'  1  20  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  5  10  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  8  33  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_footer.html.erb
+-'  1  20  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+-'  3  26  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
+-'  8  40  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/home.html.erb
+-'  8  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  3  38  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  11  34  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+-'  3  26  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
+-'  2  4  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
+-'  8  40  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/home.html.erb
+-'  8  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+-'  12  28  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+-'  25  45  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  7  37  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/application_helper.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/static_pages_controller.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/application_controller.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+-'  19  47  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+-'  10  25  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/test_helper.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/test_helper.rb
+-'  4  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
 
 # History of marks within files (newest to oldest):
 
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
-	"	105	0
-	^	95	2
-	.	67	33
-	+	11	0
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323043518_create_users.rb
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/helpers/application_helper_test.rb
+	"	6	50
+	^	6	51
+	.	6	50
+	+	8	0
+	+	7	4
+	+	5	63
+	+	6	50
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+	"	1	0
+	.	14	0
+	+	14	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/application_controller.rb
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/static_pages_controller.rb
+	"	1	0
+	^	11	13
+	.	11	12
+	+	7	0
+	+	8	10
+	+	10	0
+	+	11	12
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/application_helper.rb
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
+	"	25	45
+	^	25	46
+	.	25	45
+	+	12	23
+	+	13	13
+	+	4	68
+	+	9	0
+	+	15	32
+	+	9	31
+	+	28	0
+	+	22	25
+	+	23	15
+	+	25	34
+	+	7	36
+	+	13	44
+	+	4	0
+	+	19	43
+	+	25	45
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/site_layout_test.rb
+	"	19	47
+	^	19	48
+	.	19	47
+	+	7	4
+	+	8	0
+	+	7	0
+	+	15	5
+	+	11	49
+	+	12	34
 	+	13	0
 	+	14	0
-	+	95	13
-	+	94	42
-	+	95	1
-	+	77	0
-	+	67	33
+	+	13	35
+	+	14	37
+	+	16	0
+	+	17	24
+	+	18	13
+	+	8	0
+	+	8	0
+	+	19	0
+	+	21	0
+	+	19	0
+	+	8	0
+	+	19	47
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/test_helper.rb
+	"	10	25
+	^	10	28
+	.	10	25
+	+	10	25
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
+	"	4	0
+	.	4	0
+	+	4	34
+	+	4	0
+	+	4	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
+	"	1	0
+	^	12	29
+	.	12	28
+	+	2	24
+	+	2	0
+	+	2	0
+	+	7	35
+	+	7	0
+	+	10	0
+	+	10	0
+	+	2	0
+	+	2	0
+	+	7	11
+	+	10	12
+	+	10	40
+	+	10	36
+	+	7	34
+	+	7	7
+	+	7	7
+	+	10	7
+	+	10	7
+	+	7	14
+	+	7	13
+	+	10	13
+	+	6	15
+	+	7	0
+	+	10	0
+	+	10	0
+	+	8	0
+	+	12	28
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_header.html.erb
+	"	8	0
+	^	3	39
+	.	3	38
+	+	6	42
+	+	8	29
+	+	8	31
+	+	8	34
+	+	8	35
+	+	7	33
+	+	6	34
+	+	7	44
+	+	8	44
+	+	8	46
+	+	8	47
+	+	7	44
+	+	6	44
+	+	8	0
+	+	3	38
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/home.html.erb
+	"	8	40
+	^	8	41
+	.	8	40
+	+	8	13
+	+	9	3
+	+	10	96
+	+	10	0
+	+	10	118
+	+	2	15
+	+	3	5
+	+	13	0
+	+	4	0
+	+	5	50
+	+	7	5
+	+	13	0
+	+	12	0
+	+	7	0
+	+	8	0
+	+	1	29
+	+	5	30
+	+	2	0
+	+	8	40
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
+	"	3	26
+	^	3	27
+	.	3	26
+	+	2	10
+	+	3	3
+	+	1	32
+	+	3	26
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/ControlP
+	"	10	0
+	.	2	0
+	+	29	0
+	+	20	0
+	+	11	0
+	+	2	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/_footer.html.erb
+	"	8	33
+	^	8	46
+	.	8	0
+	+	8	42
+	+	9	44
+	+	8	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+	"	1	20
+	^	4	30
+	.	1	0
+	+	20	0
+	+	11	0
+	+	17	6
+	+	20	0
+	+	17	0
+	+	2	0
+	+	19	6
+	+	11	0
+	+	11	0
+	+	11	15
+	+	3	0
+	+	1	24
+	+	11	30
+	+	1	26
+	+	2	10
+	+	11	0
+	+	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/__Gundo_Preview__
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/__Gundo__
+	"	6	1
+	.	1	0
+	+	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/assets/stylesheets/custom.css.scss
+	"	89	5
+	^	68	16
+	.	68	15
+	+	1	30
+	+	2	17
+	+	9	0
+	+	10	19
+	+	13	0
+	+	13	0
+	+	13	0
+	+	14	15
+	+	17	0
+	+	17	0
+	+	17	0
+	+	18	18
+	+	21	0
+	+	22	19
+	+	28	0
+	+	28	20
+	+	31	0
+	+	32	15
+	+	35	0
+	+	36	15
+	+	37	21
+	+	38	20
+	+	39	19
+	+	42	0
+	+	43	17
+	+	44	21
+	+	45	20
+	+	46	19
+	+	47	20
+	+	48	12
+	+	51	0
+	+	52	17
+	+	53	19
+	+	56	0
+	+	58	0
+	+	59	0
+	+	71	0
+	+	73	0
+	+	60	19
+	+	61	17
+	+	62	12
+	+	63	0
+	+	64	21
+	+	65	17
+	+	66	18
+	+	73	0
+	+	73	12
+	+	73	22
+	+	73	12
+	+	28	0
+	+	23	0
+	+	73	0
+	+	67	0
+	+	71	0
+	+	67	0
+	+	99	0
+	+	80	0
+	+	99	0
+	+	82	0
+	+	85	0
+	+	97	0
+	+	99	0
+	+	99	0
+	+	99	0
+	+	86	0
+	+	89	0
+	+	97	0
+	+	92	0
+	+	97	0
+	+	7	17
+	+	48	0
+	+	7	0
+	+	78	41
+	+	81	15
+	+	83	24
+	+	5	27
+	+	4	25
+	+	62	9
+	+	68	15
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/scroll.txt
+	"	112	0
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/change.txt
+	"	624	7
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/cmdline.txt
+	"	1023	0
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/usr_10.txt
+	"	248	1
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+	"	93	0
+	^	92	66
+	.	92	65
+	+	12	0
+	+	13	0
+	+	16	0
+	+	111	13
+	+	110	42
+	+	111	1
+	+	82	0
+	+	72	33
+	+	92	17
+	+	100	24
+	+	101	18
+	+	18	0
+	+	15	18
+	+	16	0
+	+	18	0
+	+	11	0
+	+	17	3
+	+	19	0
+	+	14	0
+	+	92	65
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/gvimrc
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/assets/stylesheets/application.css
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+	"	7	30
+	^	7	31
+	.	7	30
+	+	53	0
+	+	52	30
+	+	6	14
+	+	7	30
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/eval.txt
+	"	1672	27
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/bundle/vim-autoswap/README.md
+	"	1	0
+
+> ~/Dropbox/Notes/Planning/diy-dropbox.md
+	"	2	42
+	.	6	42
+	+	2	0
+	+	1	1
+	+	2	55
+	+	5	7
+	+	7	0
+	+	5	35
+	+	3	55
+	+	6	0
+	+	7	0
+	+	7	0
+	+	6	42
+
+> ~/Downloads/test/test.txt
+	"	1	7
+	^	1	8
+	.	1	7
+	+	2	0
+	+	1	0
+	+	2	0
+	+	1	7
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/help.html.erb
+	"	1	0
+	^	5	31
+	.	5	30
+	+	8	7
+	+	9	167
+	+	9	0
+	+	9	213
+	+	9	0
+	+	9	252
+	+	2	0
+	+	11	6
+	+	8	0
+	+	5	14
+	+	1	23
+	+	5	30
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/toy_app/app/models/user.rb
+	"	4	17
+	^	4	18
+	.	4	17
+	+	1	0
+	+	2	21
+	+	3	0
+	+	5	0
+	+	4	17
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/toy_app/app/models/micropost.rb
+	"	3	44
+	^	3	45
+	.	3	44
+	+	3	43
+	+	2	17
+	+	4	35
+	+	3	44
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/toy_app/app/controllers/users_controller.rb
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/toy_app/config/routes.rb
+	"	1	0
+	^	7	19
+	.	7	18
+	+	7	18
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/toy_app/Gemfile
+	"	49	30
+	^	49	31
+	.	49	30
+	+	6	0
+	+	34	0
+	+	50	0
+	+	45	0
+	+	40	0
+	+	50	0
+	+	43	0
+	+	40	0
+	+	39	0
+	+	36	0
+	+	35	23
+	+	41	32
+	+	5	18
+	+	47	16
+	+	49	30
+
+> ~/Dropbox/Public/html/reddit/AndroidManifest.xml
+	"	1	0
+
+> ~/Downloads/AndroidManifest.xml
+	"	332	37
+
+> ~/ControlP
+	"	1	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/bootstrap.sh
+	"	1	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/Vagrantfile
+	"	17	3
+	^	17	4
+	.	17	3
+	+	16	3
+	+	17	3
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
+	"	1411	26
+
+> ~/Dropbox/Work/THAT/Marketing/Copy/Design Awards/2016/IDEA/submission.md
+	"	46	0
+	^	46	350
+	.	46	349
+	+	30	2
+	+	36	2
+	+	42	2
+	+	6	0
+	+	12	0
+	+	18	0
+	+	24	0
+	+	32	0
+	+	36	0
+	+	38	0
+	+	41	0
+	+	44	0
+	+	9	0
+	+	15	0
+	+	22	0
+	+	30	0
+	+	3	0
+	+	1	0
+	+	2	31
+	+	4	3
+	+	10	0
+	+	16	0
+	+	22	0
+	+	30	0
+	+	36	0
+	+	42	0
+	+	18	17
+	+	24	87
+	+	25	45
+	+	24	75
+	+	18	8
+	+	24	78
+	+	25	48
+	+	26	81
+	+	38	118
+	+	44	17
+	+	44	0
+	+	44	132
+	+	44	337
+	+	44	126
+	+	1	5
+	+	8	0
+	+	8	135
+	+	7	0
+	+	5	0
+	+	15	0
+	+	11	0
+	+	17	0
+	+	23	0
+	+	31	0
+	+	37	0
+	+	43	0
+	+	13	0
+	+	14	0
+	+	14	165
+	+	14	0
+	+	14	181
+	+	14	0
+	+	14	166
+	+	14	36
+	+	14	186
+	+	14	0
+	+	14	420
+	+	14	108
+	+	14	301
+	+	14	459
+	+	14	0
+	+	14	458
+	+	14	0
+	+	22	321
+	+	30	645
+	+	36	198
+	+	40	313
+	+	48	435
+	+	20	317
+	+	20	130
+	+	21	0
+	+	20	258
+	+	20	0
+	+	20	450
+	+	22	0
+	+	20	329
+	+	28	389
+	+	28	0
+	+	28	465
+	+	28	400
+	+	28	496
+	+	28	441
+	+	28	675
+	+	30	0
+	+	34	203
+	+	36	0
+	+	40	193
+	+	46	134
+	+	46	53
+	+	46	0
+	+	46	272
+	+	14	184
+	+	48	0
+	+	46	349
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/motion.txt
+	"	436	7
+
+> ~/Dropbox/Notes/Research Notes/Programming.md
+	"	1	0
+	^	36	138
+	.	36	137
+	+	167	4
+	+	167	0
+	+	91	0
+	+	90	0
+	+	62	0
+	+	65	34
+	+	90	0
+	+	65	290
+	+	78	6
+	+	82	28
+	+	69	17
+	+	87	6
+	+	73	8
+	+	83	19
+	+	86	8
+	+	65	80
+	+	65	302
+	+	70	21
+	+	83	20
+	+	77	8
+	+	79	4
+	+	80	95
+	+	80	0
+	+	80	168
+	+	85	14
+	+	69	16
+	+	82	0
+	+	69	12
+	+	82	15
+	+	70	26
+	+	71	23
+	+	85	19
+	+	83	39
+	+	84	33
+	+	83	39
+	+	84	19
+	+	70	35
+	+	83	41
+	+	84	16
+	+	85	28
+	+	72	25
+	+	75	23
+	+	76	10
+	+	75	15
+	+	76	19
+	+	75	16
+	+	76	24
+	+	80	99
+	+	88	4
+	+	89	75
+	+	82	15
+	+	89	0
+	+	89	144
+	+	42	32
+	+	44	162
+	+	46	78
+	+	52	2
+	+	51	6
+	+	52	42
+	+	52	1
+	+	53	69
+	+	50	53
+	+	51	2
+	+	50	6
+	+	51	0
+	+	52	0
+	+	48	62
+	+	42	37
+	+	61	46
+	+	59	231
+	+	8	85
+	+	18	1
+	+	27	41
+	+	28	7
+	+	27	42
+	+	29	35
+	+	30	1
+	+	24	38
+	+	32	16
+	+	27	45
+	+	29	27
+	+	25	0
+	+	30	42
+	+	18	62
+	+	23	0
+	+	10	23
+	+	22	6
+	+	21	12
+	+	20	0
+	+	23	4
+	+	23	0
+	+	12	113
+	+	27	16
+	+	16	41
+	+	17	0
+	+	16	49
+	+	36	115
+	+	40	16
+	+	35	0
+	+	36	137
 
 > ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
 	"	1	0
@@ -1619,11 +2408,6 @@ $needs
 	^	1	43
 	.	1	42
 	+	1	42
-
-> ~/ControlP
-	"	10	0
-	.	2	0
-	+	2	0
 
 > ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/ChillTHAT-Platter.md
 	"	15	0
@@ -1768,24 +2552,11 @@ $needs
 	+	1	34
 	+	3	0
 
-> ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
-	"	541	7
-
 > ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/SpreadTHAT-Deluxe.md
 	"	2	0
 	^	1	44
 	.	1	43
 	+	1	43
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/Vagrantfile
-	"	17	55
-	^	17	47
-	.	17	46
-	+	16	3
-	+	17	46
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/bootstrap.sh
-	"	3	0
 
 > ~/Downloads/vagrant/Vagrantfile
 	"	17	56
@@ -1935,111 +2706,6 @@ $needs
 	+	135	48
 	+	135	22
 	+	135	0
-
-> ~/Dropbox/Notes/Research Notes/Programming.md
-	"	36	137
-	^	36	138
-	.	36	137
-	+	167	4
-	+	167	0
-	+	91	0
-	+	90	0
-	+	62	0
-	+	65	34
-	+	90	0
-	+	65	290
-	+	78	6
-	+	82	28
-	+	69	17
-	+	87	6
-	+	73	8
-	+	83	19
-	+	86	8
-	+	65	80
-	+	65	302
-	+	70	21
-	+	83	20
-	+	77	8
-	+	79	4
-	+	80	95
-	+	80	0
-	+	80	168
-	+	85	14
-	+	69	16
-	+	82	0
-	+	69	12
-	+	82	15
-	+	70	26
-	+	71	23
-	+	85	19
-	+	83	39
-	+	84	33
-	+	83	39
-	+	84	19
-	+	70	35
-	+	83	41
-	+	84	16
-	+	85	28
-	+	72	25
-	+	75	23
-	+	76	10
-	+	75	15
-	+	76	19
-	+	75	16
-	+	76	24
-	+	80	99
-	+	88	4
-	+	89	75
-	+	82	15
-	+	89	0
-	+	89	144
-	+	42	32
-	+	44	162
-	+	46	78
-	+	52	2
-	+	51	6
-	+	52	42
-	+	52	1
-	+	53	69
-	+	50	53
-	+	51	2
-	+	50	6
-	+	51	0
-	+	52	0
-	+	48	62
-	+	42	37
-	+	61	46
-	+	59	231
-	+	8	85
-	+	18	1
-	+	27	41
-	+	28	7
-	+	27	42
-	+	29	35
-	+	30	1
-	+	24	38
-	+	32	16
-	+	27	45
-	+	29	27
-	+	25	0
-	+	30	42
-	+	18	62
-	+	23	0
-	+	10	23
-	+	22	6
-	+	21	12
-	+	20	0
-	+	23	4
-	+	23	0
-	+	12	113
-	+	27	16
-	+	16	41
-	+	17	0
-	+	16	49
-	+	36	115
-	+	40	16
-	+	35	0
-	+	36	137
 
 > ~/Dropbox/src/ruby/ruby-quiz/002-secret-santas.rb
 	"	113	0
@@ -2471,589 +3137,3 @@ $needs
 	^	1	0
 	.	1	0
 	+	1	0
-
-> ~/Dropbox/src/ruby/elm-city-craftworks/course-001/samples/part1/whiteboard.md
-	"	9	48
-	^	9	49
-	.	9	48
-	+	11	2
-	+	12	18
-	+	11	2
-	+	19	0
-	+	18	107
-	+	17	58
-	+	18	86
-	+	10	0
-	+	9	0
-	+	10	0
-	+	9	48
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/windows.txt
-	"	440	12
-
-> ~/Downloads/data.rb
-	"	2	3
-	^	2	4
-	.	2	3
-	+	3	0
-	+	1	10
-	+	2	3
-
-> ~/Downloads/data-require.rb
-	"	4	0
-	^	4	0
-	.	3	15
-	+	3	15
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Manuals/FreezTHAT.md
-	"	22	0
-	^	17	0
-	.	22	0
-	+	22	53
-	+	17	0
-	+	22	0
-
-> ~\vimfiles\gvimrc
-	"	1	0
-	.	9	41
-	+	9	41
-
-> ~\vimfiles\config\mappings.vim
-	"	80	4
-	^	80	5
-	.	80	4
-	+	71	6
-	+	77	30
-	+	81	0
-	+	81	0
-	+	79	0
-	+	73	0
-	+	74	0
-	+	75	4
-	+	78	0
-	+	79	0
-	+	80	4
-
-> ~/Documents/Reference/irs pin.txt
-	"	1	0
-
-> ~/Desktop/recovery.js
-	"	1	39383
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Manuals/HeatTHAT.md
-	"	54	0
-	^	27	3
-	.	27	2
-	+	29	0
-	+	1	20
-	+	2	51
-	+	3	131
-	+	2	0
-	+	3	3
-	+	12	9
-	+	7	17
-	+	8	20
-	+	6	33
-	+	7	21
-	+	8	35
-	+	9	10
-	+	10	10
-	+	11	10
-	+	12	10
-	+	9	28
-	+	10	28
-	+	11	28
-	+	12	28
-	+	29	0
-	+	29	4
-	+	29	0
-	+	14	39
-	+	17	3
-	+	16	4
-	+	21	45
-	+	22	45
-	+	25	116
-	+	20	118
-	+	19	130
-	+	14	66
-	+	27	2
-
-> ~/Dropbox/Notes/Scratch.md
-	"	1	0
-	.	22	0
-	+	22	9
-	+	22	0
-	+	22	1
-	+	22	16
-	+	22	14
-	+	22	11
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-	+	22	0
-
-> ~/Dropbox/Backup/Xerox_Fiery.md
-	"	1	127
-	^	1	128
-	.	1	127
-	+	1	127
-
-> ~/Dropbox/src/ruby/rpcfn/01-shift-subtitle.rb
-	"	1	0
-	^	49	75
-	.	2	0
-	+	4	0
-	+	73	16
-	+	73	0
-	+	33	13
-	+	34	0
-	+	1	18
-	+	4	0
-	+	4	0
-	+	7	0
-	+	14	0
-	+	34	23
-	+	37	2
-	+	34	5
-	+	37	26
-	+	39	0
-	+	39	21
-	+	34	12
-	+	37	12
-	+	39	0
-	+	38	18
-	+	34	2
-	+	37	2
-	+	38	2
-	+	39	2
-	+	39	0
-	+	53	0
-	+	54	0
-	+	52	9
-	+	51	0
-	+	51	0
-	+	33	0
-	+	33	0
-	+	33	9
-	+	33	0
-	+	33	20
-	+	33	13
-	+	33	15
-	+	33	21
-	+	33	0
-	+	33	0
-	+	33	0
-	+	33	0
-	+	33	0
-	+	33	0
-	+	33	45
-	+	33	51
-	+	33	33
-	+	51	0
-	+	35	0
-	+	36	0
-	+	51	0
-	+	33	0
-	+	33	35
-	+	51	0
-	+	52	0
-	+	49	88
-	+	50	29
-	+	74	20
-	+	73	40
-	+	74	25
-	+	33	4
-	+	33	4
-	+	33	4
-	+	47	10
-	+	48	12
-	+	2	12
-	+	33	32
-	+	48	0
-	+	60	1
-	+	61	0
-	+	59	0
-	+	56	86
-	+	58	80
-	+	35	0
-	+	33	0
-	+	49	74
-	+	2	0
-	+	2	0
-
-> ~/Dropbox/src/ruby/pine-learn-to-program/05.6.1-full-name-greeting.rb
-	"	2	0
-	.	3	0
-	+	3	0
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/ftplugin/ruby.vim
-	"	1	0
-	^	1	27
-	.	1	26
-	+	1	26
-
-> ~/Dropbox/src/ruby/elm-city-craftworks/course-001/PART_1.md
-	"	86	3
-	^	63	4
-	.	64	0
-	+	63	0
-	+	62	14
-	+	72	10
-	+	64	0
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/gvimrc
-	"	26	0
-	^	26	2
-	.	26	0
-	+	2	17
-	+	4	33
-	+	3	2
-	+	4	0
-	+	8	4
-	+	6	0
-	+	4	0
-	+	3	17
-	+	8	0
-	+	4	0
-	+	3	15
-	+	26	18
-	+	25	25
-	+	26	0
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Website/blog/awards.md
-	"	1	0
-	^	1	13
-	.	2	0
-	+	1	35
-	+	2	0
-	+	4	69
-	+	13	0
-	+	4	118
-	+	4	35
-	+	4	480
-	+	5	0
-	+	6	112
-	+	4	154
-	+	4	0
-	+	4	287
-	+	11	0
-	+	12	0
-	+	8	100
-	+	6	130
-	+	10	56
-	+	8	370
-	+	6	235
-	+	4	0
-	+	4	0
-	+	4	0
-	+	1	28
-	+	2	28
-	+	1	12
-	+	2	0
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Website/blog/events.md
-	"	1	0
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Website/blog/events/iha-2016.md
-	"	12	275
-	^	23	64
-	.	23	63
-	+	24	0
-	+	4	122
-	+	4	40
-	+	4	378
-	+	4	145
-	+	6	356
-	+	8	4
-	+	6	336
-	+	8	233
-	+	8	187
-	+	8	0
-	+	9	0
-	+	8	276
-	+	8	71
-	+	10	9
-	+	8	234
-	+	8	0
-	+	8	234
-	+	14	257
-	+	16	147
-	+	1	41
-	+	2	0
-	+	16	172
-	+	15	0
-	+	16	23
-	+	18	45
-	+	19	0
-	+	21	389
-	+	23	63
-
-> ~/Dropbox/src/ruby/elm-city-craftworks/rcat/tests.rb
-	"	26	0
-
-> ~/Dropbox/src/ruby/solo/scratch.rb
-	"	2	0
-	^	1	2
-	.	2	0
-	+	22	33
-	+	1	1
-	+	2	0
-
-> /Volumes/EFI/EFI/CLOVER/config.plist
-	"	111	1
-
-> ~/Dropbox/src/ruby/elm-city-craftworks/rcat/lib/rcat.rb
-	"	1	0
-
-> ~/Dropbox/Backup/Install List.md
-	"	1	0
-	^	104	35
-	.	104	34
-	+	55	0
-	+	52	0
-	+	54	9
-	+	71	0
-	+	105	0
-	+	104	34
-
-> ~/Dropbox/Work/THAT/Marketing/Strategy/SEO/0-Proposal.md
-	"	57	0
-	^	59	92
-	.	59	91
-	+	32	16
-	+	31	25
-	+	32	17
-	+	31	0
-	+	32	0
-	+	35	2
-	+	36	1
-	+	37	0
-	+	33	19
-	+	34	19
-	+	44	6
-	+	45	0
-	+	50	13
-	+	52	0
-	+	52	0
-	+	6	16
-	+	7	0
-	+	8	0
-	+	9	3
-	+	10	0
-	+	17	3
-	+	18	0
-	+	24	15
-	+	28	14
-	+	29	0
-	+	30	0
-	+	31	3
-	+	32	0
-	+	44	4
-	+	45	0
-	+	50	3
-	+	52	0
-	+	26	39
-	+	52	7
-	+	52	0
-	+	52	190
-	+	52	30
-	+	44	0
-	+	52	58
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	21
-	+	88	2
-	+	52	62
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	0
-	+	52	1
-	+	52	117
-	+	52	0
-	+	52	310
-	+	52	153
-	+	52	178
-	+	52	0
-	+	54	0
-	+	79	0
-	+	52	0
-	+	78	248
-	+	68	0
-	+	61	31
-	+	75	2
-	+	66	0
-	+	73	0
-	+	75	0
-	+	73	66
-	+	67	0
-	+	74	0
-	+	73	0
-	+	74	62
-	+	67	0
-	+	69	0
-	+	66	0
-	+	67	0
-	+	68	0
-	+	67	0
-	+	69	0
-	+	67	0
-	+	63	0
-	+	64	0
-	+	66	0
-	+	59	91
-
-> ~/Gemfile
-	"	5	10
-	^	5	0
-	.	5	10
-	+	5	10
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/autoload/ctrlp/dir.vim
-	"	1	0
-
-> ~/Dropbox/foo/bar/yallo.md
-	"	1	0
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/ScoopTHAT-Lil-Dipper.md
-	"	6	0
-	^	9	52
-	.	9	41
-	+	2	0
-	+	3	0
-	+	2	48
-	+	2	134
-	+	3	40
-	+	3	0
-	+	3	0
-	+	2	0
-	+	2	0
-	+	31	0
-	+	27	4
-	+	27	2
-	+	32	9
-	+	34	0
-	+	34	0
-	+	32	10
-	+	34	70
-	+	34	0
-	+	33	0
-	+	6	23
-	+	7	0
-	+	8	0
-	+	34	23
-	+	36	0
-	+	34	37
-	+	34	37
-	+	36	32
-	+	34	0
-	+	36	0
-	+	32	25
-	+	35	31
-	+	14	44
-	+	6	5
-	+	7	5
-	+	12	0
-	+	11	30
-	+	11	0
-	+	21	21
-	+	6	0
-	+	2	0
-	+	27	0
-	+	27	0
-	+	20	0
-	+	11	0
-	+	9	0
-	+	19	36
-	+	9	0
-	+	27	0
-	+	27	0
-	+	21	141
-	+	21	0
-	+	21	94
-	+	23	8
-	+	27	0
-	+	27	144
-	+	21	95
-	+	23	31
-	+	27	0
-	+	21	95
-	+	25	143
-	+	25	179
-	+	19	22
-	+	26	0
-	+	25	174
-	+	25	188
-	+	9	0
-	+	25	188
-	+	9	25
-	+	11	25
-	+	9	63
-	+	10	0
-	+	11	0
-	+	9	51
-	+	10	51
-	+	9	41
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/intro.txt
-	"	129	33
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/usr_02.txt
-	"	26	0
-
-> ~/Dropbox/Work/TODO.md
-	"	36	0
-	.	7	0
-	+	7	0
-
-> ~/Dropbox/Work/Copy/Packaging/ScoopTHAT-Lil-Dipper.md
-	"	13	0
-	^	41	3
-	.	41	2
-	+	13	75
-	+	1	5
-	+	14	0
-	+	41	2
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/various.txt
-	"	281	13
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/options.txt
-	"	8116	6
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/motion.txt
-	"	1314	6
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/eval.txt
-	"	7	37
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/editing.txt
-	"	596	13
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/quickfix.txt
-	"	518	14
-
-> ~/Dropbox/Backup/UI/solarized/vim-colors-solarized/autoload/togglebg.vim
-	"	1	0
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.95/MacVim.app/Contents/Resources/vim/runtime/doc/undo.txt
-	"	252	0

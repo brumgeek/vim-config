@@ -11,7 +11,12 @@ if has('unix')
 elseif has('win32')
   nnoremap <Leader>ev :e $HOMEPATH\vimfiles\config\
 endif
-nnoremap <Leader>sv :source $MYVIMRC \| source $MYGVIMRC<CR>
+
+if has('gui_running')
+  nnoremap <Leader>sv :source $MYVIMRC \| source $MYGVIMRC<CR>
+else
+  nnoremap <Leader>sv :source $MYVIMRC<CR>
+endif
 
 " TEXT MANIPULATION
 " <C-h> = <Backspace>, so...
@@ -84,6 +89,17 @@ nnoremap <Tab> <C-w>w
 nnoremap <S-Tab> <C-w>W
 
 " NAVIGATION
+" in Command Mode, from http://stackoverflow.com/a/6923282/4865822
+cnoremap <C-a> <Home>
+cnoremap <C-e> <End>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <M-b> <S-Left>
+cnoremap <M-f> <S-Right>
+cnoremap <C-d> <Del>
+
 " Up/down keys navigate screen lines, rather than file lines
 nnoremap <Down> gj
 nnoremap <Up> gk
