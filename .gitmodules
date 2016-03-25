@@ -41,3 +41,6 @@
 [submodule "bundle/vim-autoswap"]
 	path = bundle/vim-autoswap
 	url = https://github.com/gioele/vim-autoswap.git
+[submodule "bundle/vim-commentary"]
+	path = bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
