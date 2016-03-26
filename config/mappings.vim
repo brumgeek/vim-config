@@ -74,11 +74,6 @@ nnoremap <Leader>bn :bn<CR>
 nnoremap <Leader>bd :b#<bar>bd#<CR>
 
 " UI & WINDOW MANAGEMENT
-" Set width for Split Screen in El Capitan
-if has('gui_macvim')
-  nnoremap <Leader>ss :set columns=95<CR>:sleep 15m<CR><C-L>
-endif
-
 " Enable full-screen on Windows
 if has('win32')
   map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>

@@ -8,18 +8,24 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~Msle0~/\<msg\>
+~MSle0~/split
 
 # Last Substitute Search Pattern:
-~MSle0&#{@base_title}
+~MSle0&def
 
 # Last Substitute String:
 $
 
 # Command Line History (newest to oldest):
+:e /Users/rlue/.vim/config/mappings.vim
+:'<,'>e 
+:e app/views/static_pages/about.html.erb
+:app/vie
+:e app/controllers/users_controller.rb
+:sp Gemfile
+:g/def/Commentary
 :e 
 :e app/views/layouts/application.html.erb
-:e app/controllers/users_controller.rb
 :e app/views/users/show.html.erb
 :sp app/views/shared/_error_messages.html.erb
 :bd
@@ -68,7 +74,6 @@ $
 :sav /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
 :sav /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/contact.html.erb
 :%s/light-gray/gray-light/g
-:e /Users/rlue/.vim/config/mappings.vim
 :echo has('gvim')
 :echo has('gui_running')
 :e ~/.vim/gvimrc
@@ -1012,13 +1017,11 @@ $
 :e Copy/Website/about-us.md
 :w Copy/Website/about-us
 :h macro
-:h macros
-:e ../../Downloads/Italy\ store\ list.xls\ -\ Foglio1.csv
-:e Copy/Website/our-story.md
-:sav /Users/rlue/Dropbox/Work/Copy/Packaging/HeatTHAT-Gravy.md
-:e Copy/Packaging/HeatTHAT-Sake.md
 
 # Search String History (newest to oldest):
+?/split
+?/bcryp
+? def
 ?/commen
 ? \$\(cursor\|select\)\$
 ? \<msg\>
@@ -1358,12 +1361,18 @@ $
 "0	CHAR	0
 	>
 ""1	LINE	0
+	" Set width for Split Screen in El Capitan
+	if has('gui_macvim')
+	  nnoremap <Leader>ss :set columns=95<CR>:sleep 15m<CR><C-L>
+	endif
+	
+"2	LINE	0
 	
 	<ul>partone
 	  <li>flumpydumpy</li>
 	</ul>
 	parttwo
-"2	LINE	0
+"3	LINE	0
 	  test "error messages" do
 	    post users_path, user: { name: "",
 	                             email: "i_tried@google",
@@ -1372,7 +1381,7 @@ $
 	    assert_equal 
 	  end
 	
-"3	LINE	0
+"4	LINE	0
 	  test "invalid signup params" do
 	    get signup_path
 	    assert_no_difference 'User.count' do
@@ -1384,7 +1393,7 @@ $
 	    assert_template 'users/new'
 	  end
 	
-"4	LINE	0
+"5	LINE	0
 	
 	  test "valid signup" do
 	    get signup_path
@@ -1397,16 +1406,14 @@ $
 	    assert_template 'users/show'
 	  end
 	end
-"5	LINE	0
-	
 "6	LINE	0
-	      # Handle a successful save
+	
 "7	LINE	0
 	      # Handle a successful save
 "8	LINE	0
-	
+	      # Handle a successful save
 "9	LINE	0
-	  c:r
+	
 "a	CHAR	0
 	
 "c	CHAR	0
@@ -1440,23 +1447,35 @@ $
 # global variables:
 
 # File marks:
-'0  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
-'1  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
-'2  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
-'3  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
-'4  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
-'5  14  22  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
-'6  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/.keep
-'7  16  13  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
-'8  22  64  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
-'9  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+'0  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+'1  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+'2  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'3  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'4  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
+'5  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+'6  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
+'7  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
+'8  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
+'9  14  22  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 
 # Jumplist (newest first):
+-'  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+-'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+-'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+-'  13  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+-'  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+-'  11  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+-'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+-'  13  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+-'  16  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+-'  20  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
 -'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
 -'  23  17  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
 -'  14  64  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  13  10  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
 -'  8  32  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/shared/_error_messages.html.erb
 -'  21  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
@@ -1470,21 +1489,17 @@ $
 -'  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
 -'  5  69  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
 -'  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
 -'  13  37  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
 -'  14  22  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/.keep
--'  16  13  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  22  64  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
 -'  9  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
 -'  8  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
 -'  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
 -'  7  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  11  21  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  23  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
 -'  1  7  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/create.html.erb
@@ -1517,7 +1532,6 @@ $
 -'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
 -'  23  17  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
 -'  14  64  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  13  10  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
 -'  8  32  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/shared/_error_messages.html.erb
 -'  21  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
@@ -1531,27 +1545,153 @@ $
 -'  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
 -'  5  69  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
 -'  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
 -'  13  37  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  14  22  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/.keep
--'  16  13  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  22  64  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  9  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  8  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  7  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  11  21  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  23  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  1  7  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/create.html.erb
--'  2  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/create.html.erb
+-'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
+-'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+-'  23  17  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+-'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+-'  13  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+	"	77	0
+	^	87	66
+	.	77	0
+	+	12	0
+	+	13	0
+	+	16	0
+	+	106	13
+	+	105	42
+	+	106	1
+	+	77	0
+	+	72	33
+	+	87	17
+	+	95	24
+	+	96	18
+	+	18	0
+	+	15	18
+	+	16	0
+	+	18	0
+	+	11	0
+	+	17	3
+	+	19	0
+	+	14	0
+	+	87	65
+	+	77	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
+	"	13	2
+	^	2	33
+	.	2	26
+	+	4	32
+	+	8	17
+	+	4	43
+	+	8	0
+	+	5	3
+	+	9	3
+	+	16	37
+	+	4	24
+	+	16	53
+	+	4	50
+	+	9	0
+	+	4	42
+	+	11	29
+	+	10	56
+	+	11	55
+	+	4	0
+	+	4	0
+	+	2	14
+	+	4	0
+	+	5	0
+	+	7	0
+	+	3	0
+	+	6	0
+	+	7	19
+	+	10	53
+	+	13	20
+	+	14	20
+	+	13	20
+	+	12	0
+	+	14	38
+	+	15	22
+	+	7	49
+	+	2	26
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+	"	27	5
+	^	7	31
+	.	27	0
+	+	53	0
+	+	52	30
+	+	6	14
+	+	7	30
+	+	27	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+	"	13	0
+	^	13	52
+	.	19	0
+	+	5	0
+	+	3	27
+	+	4	0
+	+	7	19
+	+	9	0
+	+	10	11
+	+	11	33
+	+	17	0
+	+	16	15
+	+	14	31
+	+	11	33
+	+	27	0
+	+	23	34
+	+	11	0
+	+	23	40
+	+	24	41
+	+	25	44
+	+	11	32
+	+	2	0
+	+	2	0
+	+	11	0
+	+	16	13
+	+	14	22
+	+	13	51
+	+	20	0
+	+	16	0
+	+	13	0
+	+	10	0
+	+	2	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+
+> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
+	"	1	0
+	^	4	30
+	.	1	0
+	+	20	0
+	+	11	0
+	+	17	6
+	+	20	0
+	+	17	0
+	+	2	0
+	+	19	6
+	+	11	0
+	+	11	0
+	+	11	15
+	+	3	0
+	+	1	24
+	+	11	30
+	+	1	26
+	+	2	10
+	+	11	0
+	+	1	0
 
 > ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
 	"	1	0
@@ -1618,35 +1758,6 @@ $
 	+	18	0
 	+	17	70
 	+	30	22
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
-	"	13	10
-	^	13	52
-	.	13	51
-	+	5	0
-	+	3	27
-	+	4	0
-	+	7	19
-	+	9	0
-	+	10	11
-	+	11	33
-	+	17	0
-	+	16	15
-	+	14	31
-	+	11	33
-	+	27	0
-	+	23	34
-	+	11	0
-	+	23	40
-	+	24	41
-	+	25	44
-	+	11	32
-	+	2	0
-	+	2	0
-	+	11	0
-	+	16	13
-	+	14	22
-	+	13	51
 
 > ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
 	"	1	0
@@ -1791,16 +1902,6 @@ $
 	+	2	47
 	+	4	24
 	+	5	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
-	"	1	0
-	^	7	31
-	.	27	0
-	+	53	0
-	+	52	30
-	+	6	14
-	+	7	30
-	+	27	0
 
 > ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
 	"	1	0
@@ -2050,71 +2151,11 @@ $
 	+	11	0
 	+	1	12
 
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
-	"	2	26
-	^	2	33
-	.	2	26
-	+	4	32
-	+	8	17
-	+	4	43
-	+	8	0
-	+	5	3
-	+	9	3
-	+	16	37
-	+	4	24
-	+	16	53
-	+	4	50
-	+	9	0
-	+	4	42
-	+	11	29
-	+	10	56
-	+	11	55
-	+	4	0
-	+	4	0
-	+	2	14
-	+	4	0
-	+	5	0
-	+	7	0
-	+	3	0
-	+	6	0
-	+	7	19
-	+	10	53
-	+	13	20
-	+	14	20
-	+	13	20
-	+	12	0
-	+	14	38
-	+	15	22
-	+	7	49
-	+	2	26
-
 > ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323071704_add_index_to_users_email.rb
 	"	3	38
 	^	3	38
 	.	3	37
 	+	3	37
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
-	"	1	0
-	^	4	30
-	.	1	0
-	+	20	0
-	+	11	0
-	+	17	6
-	+	20	0
-	+	17	0
-	+	2	0
-	+	19	6
-	+	11	0
-	+	11	0
-	+	11	15
-	+	3	0
-	+	1	24
-	+	11	30
-	+	1	26
-	+	2	10
-	+	11	0
-	+	1	0
 
 > ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/models/user_test.rb
 	"	51	4
@@ -2361,31 +2402,6 @@ $
 
 > /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/usr_10.txt
 	"	248	1
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
-	"	93	0
-	^	92	66
-	.	92	65
-	+	12	0
-	+	13	0
-	+	16	0
-	+	111	13
-	+	110	42
-	+	111	1
-	+	82	0
-	+	72	33
-	+	92	17
-	+	100	24
-	+	101	18
-	+	18	0
-	+	15	18
-	+	16	0
-	+	18	0
-	+	11	0
-	+	17	3
-	+	19	0
-	+	14	0
-	+	92	65
 
 > ~/Dropbox/Backup/Unix/rlue/.vim/gvimrc
 	"	1	0
