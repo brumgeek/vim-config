@@ -2,6 +2,7 @@
 if has('gui_macvim')
   if hostname() =~ "sardanapalus"
     set guifont=Source\ Code\ Pro\ Light:h19
+    " set guifont=PragmataPro:h17
   else
     set guifont=Source\ Code\ Pro\ Light:h18
   endif

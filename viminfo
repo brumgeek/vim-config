@@ -1358,9 +1358,9 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	>
-""1	LINE	0
+"0	LINE	0
+	    set guifont=Source\ Code\ Pro\ Light:h19
+"1	LINE	0
 	" Set width for Split Screen in El Capitan
 	if has('gui_macvim')
 	  nnoremap <Leader>ss :set columns=95<CR>:sleep 15m<CR><C-L>
@@ -1441,24 +1441,26 @@ $
 	
 	
 	
-"-	CHAR	0
-	<div class=\"alert alert-#{msg_type}\">#{msg}</div> 
+""-	CHAR	0
+	Source\ Code\ Pro\ Light
 
 # global variables:
 
 # File marks:
-'0  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
-'1  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
-'2  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
-'3  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
-'4  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
-'5  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
-'6  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
-'7  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
-'8  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
-'9  14  22  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'0  5  32  ~/.vim/gvimrc
+'1  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+'2  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+'3  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'4  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'5  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
+'6  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
+'7  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
+'8  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
+'9  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
 
 # Jumplist (newest first):
+-'  5  32  ~/.vim/gvimrc
+-'  1  0  ~/.vim/gvimrc
 -'  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 -'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 -'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
@@ -1558,6 +1560,12 @@ $
 -'  13  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/.vim/gvimrc
+	"	5	32
+	^	5	29
+	.	5	0
+	+	5	0
 
 > ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 	"	77	0
@@ -3131,18 +3139,3 @@ $
 
 > ~/Dropbox/src/rails/hello_app/README.rdoc
 	"	1	0
-
-> ~/Dropbox/src/rails/hello_app/Gemfile
-	"	7	5
-	^	7	15
-	.	7	0
-	+	9	23
-	+	11	21
-	+	13	21
-	+	18	26
-	+	20	24
-	+	22	21
-	+	24	13
-	+	45	22
-	+	37	22
-	+	7	0
