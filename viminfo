@@ -17,6 +17,7 @@
 $
 
 # Command Line History (newest to oldest):
+:e /Users/rlue/.vim/gvimrc
 :e /Users/rlue/.vim/config/mappings.vim
 :'<,'>e 
 :e app/views/static_pages/about.html.erb
@@ -214,7 +215,6 @@ $
 :w 
 :map <Leader>x
 :cd src/ruby/elm-city-craftworks/course-001/samples/part1/
-:e /Users/rlue/.vim/gvimrc
 :e /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Website/blog/awards.md
 :e /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Website/blog/events/iha-2016.md
 :!mv /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Website/blog/ /Users/rlue/Dropbox/Work/THAT/Marketing/Copy/Website/blog/events/iha-2015.md
@@ -1359,7 +1359,8 @@ $
 
 # Registers:
 "0	LINE	0
-	    set guifont=Source\ Code\ Pro\ Light:h19
+	[submodule "bundle/vim-colors-solarized"]
+		url = git://github.com/altercation/vim-colors-solarized.git
 "1	LINE	0
 	" Set width for Split Screen in El Capitan
 	if has('gui_macvim')
@@ -1442,25 +1443,29 @@ $
 	
 	
 ""-	CHAR	0
-	Source\ Code\ Pro\ Light
+	altercation/vim-colors-solarized.git
 
 # global variables:
 
 # File marks:
-'0  5  32  ~/.vim/gvimrc
-'1  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
-'2  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
-'3  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
-'4  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
-'5  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
-'6  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
-'7  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
-'8  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
-'9  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
+'0  15  0  ~/.vim/.git/config
+'1  16  47  ~/.vim/.git/config
+'2  4  5  ~/.vim/gvimrc
+'3  5  32  ~/.vim/gvimrc
+'4  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+'5  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+'6  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'7  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'8  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
+'9  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
 
 # Jumplist (newest first):
--'  5  32  ~/.vim/gvimrc
+-'  15  0  ~/.vim/.git/config
+-'  16  25  ~/.vim/.git/config
+-'  1  0  ~/.vim/.git/config
+-'  4  5  ~/.vim/gvimrc
 -'  1  0  ~/.vim/gvimrc
+-'  5  32  ~/.vim/gvimrc
 -'  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 -'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 -'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
@@ -1550,19 +1555,17 @@ $
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
 -'  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
--'  13  37  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/.keep
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
--'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  23  17  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
--'  13  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
 
 # History of marks within files (newest to oldest):
 
+> ~/.vim/.git/config
+	"	15	0
+	.	16	0
+	+	16	32
+	+	16	0
+
 > ~/.vim/gvimrc
-	"	5	32
+	"	4	5
 	^	5	29
 	.	5	0
 	+	5	0
@@ -3136,6 +3139,3 @@ $
 	^	7	33
 	.	7	32
 	+	7	32
-
-> ~/Dropbox/src/rails/hello_app/README.rdoc
-	"	1	0
