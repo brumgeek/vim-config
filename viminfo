@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/commentary
+~MSle0~/â€˜
 
 # Last Substitute Search Pattern:
 ~MSle0&def
@@ -17,6 +17,9 @@
 $
 
 # Command Line History (newest to oldest):
+:set guifont=Source\ Code\ Pro:h19
+:set guifont=PragmataPro:h17
+:enew
 :e /Users/rlue/.vim/gvimrc
 :e /Users/rlue/.vim/config/mappings.vim
 :'<,'>e 
@@ -228,7 +231,6 @@ $
 :tabe src/ruby/rpcfn/01-shift-subtitle.rb
 :e src/ruby/elm-city-craftworks/rcat/tests.rb
 :set filetype=md
-:enew
 :e Backup/
 :bn
 :CtrlP
@@ -246,7 +248,6 @@ $
 : 
 :echo hostname()
 :echo hostname
-:set guifont=Source\ Code\ Pro:h19
 :set guifont=
 :echo has('mac')
 :set guifont=Source\ Code\ Pro\ ExtraLight:h18
@@ -1016,9 +1017,10 @@ $
 :e 1
 :e Copy/Website/about-us.md
 :w Copy/Website/about-us
-:h macro
 
 # Search String History (newest to oldest):
+?/â€˜
+?/'
 ?/commentary
 ?/split
 ?/bcryp
@@ -1050,7 +1052,6 @@ $
 ?/raw: "com.pleco.chinesesystem.doscreenocractivity
 ? \<intent\>
 ?/intent filter
-?/'
 ? \<a\>
 ? =
 ? .	
@@ -1360,28 +1361,31 @@ $
 
 # Registers:
 "0	LINE	0
-	[submodule "bundle/vim-colors-solarized"]
-		url = git://github.com/altercation/vim-colors-solarized.git
-""1	LINE	0
-	[submodule "bundle/bundle/vim-commentary"]
-		url = git://github.com/tpope/vim-commentary.git
+	  " Enable the appropriate cursor shape (vert. line) in insert mode 
+	  let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+"1	LINE	0
+	He joined Gixia Group in 2014, where he lent his talents not only in management and personnel development, but also in bringing our young kitchenware brand and smart home platform to the international market.
+	
 "2	LINE	0
-	[submodule "bundle/bundle/vim-commentary"]
-		path = bundle/bundle/vim-commentary
-		url = git://github.com/tpope/vim-commentary.git
+	Meiâ€™s interdisciplinary academic background spans engineering, business, and management. He has an MBA with a specialization in marketing and product management in high-tech. 
+	
 "3	LINE	0
+	
+"4	LINE	0
+	His familiarity with 
+"5	LINE	0
 	" Set width for Split Screen in El Capitan
 	if has('gui_macvim')
 	  nnoremap <Leader>ss :set columns=95<CR>:sleep 15m<CR><C-L>
 	endif
 	
-"4	LINE	0
+"6	LINE	0
 	
 	<ul>partone
 	  <li>flumpydumpy</li>
 	</ul>
 	parttwo
-"5	LINE	0
+"7	LINE	0
 	  test "error messages" do
 	    post users_path, user: { name: "",
 	                             email: "i_tried@google",
@@ -1390,7 +1394,7 @@ $
 	    assert_equal 
 	  end
 	
-"6	LINE	0
+"8	LINE	0
 	  test "invalid signup params" do
 	    get signup_path
 	    assert_no_difference 'User.count' do
@@ -1402,7 +1406,7 @@ $
 	    assert_template 'users/new'
 	  end
 	
-"7	LINE	0
+"9	LINE	0
 	
 	  test "valid signup" do
 	    get signup_path
@@ -1415,10 +1419,6 @@ $
 	    assert_template 'users/show'
 	  end
 	end
-"8	LINE	0
-	
-"9	LINE	0
-	      # Handle a successful save
 "a	CHAR	0
 	
 "c	CHAR	0
@@ -1445,38 +1445,32 @@ $
 	Zq
 	
 	
-	
-"-	CHAR	0
-	altercation/vim-colors-solarized.git
+	Qvus€kb€kbisual
+""-	CHAR	0
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
 
 # global variables:
 
 # File marks:
-'0  33  0  ~/.vim/.git/config
-'1  46  1  ~/.vim/.gitmodules
-'2  34  1  ~/.vim/.git/config
-'3  1  0  ~/.vim/.git/config
-'4  15  0  ~/.vim/.git/config
-'5  16  47  ~/.vim/.git/config
-'6  4  5  ~/.vim/gvimrc
-'7  5  32  ~/.vim/gvimrc
-'8  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
-'9  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+'0  19  13  ~/.vim/config/ui_tweaks.vim
+'1  1  0  ~/test.txt
+'2  1  0  ~/Downloads/Pulp Fiction (1994) 720p BrRip AAC x264 - LOKI/If you like my work.txt
+'3  1  0  ~/.vim/gvimrc
+'4  4  0  ~/.vim/gvimrc
+'5  5  32  ~/.vim/gvimrc
+'6  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
+'7  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
+'8  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+'9  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
 
 # Jumplist (newest first):
--'  33  0  ~/.vim/.git/config
--'  1  0  ~/.vim/.git/config
--'  46  1  ~/.vim/.gitmodules
--'  47  34  ~/.vim/.gitmodules
--'  45  19  ~/.vim/.gitmodules
--'  44  23  ~/.vim/.gitmodules
--'  1  0  ~/.vim/.gitmodules
--'  34  1  ~/.vim/.git/config
--'  15  0  ~/.vim/.git/config
--'  16  25  ~/.vim/.git/config
--'  4  5  ~/.vim/gvimrc
+-'  19  13  ~/.vim/config/ui_tweaks.vim
+-'  1  0  ~/.vim/config/ui_tweaks.vim
+-'  1  0  ~/test.txt
+-'  1  0  ~/Downloads/Pulp Fiction (1994) 720p BrRip AAC x264 - LOKI/If you like my work.txt
 -'  1  0  ~/.vim/gvimrc
--'  5  32  ~/.vim/gvimrc
+-'  5  0  ~/.vim/gvimrc
+-'  4  0  ~/.vim/gvimrc
 -'  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 -'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 -'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
@@ -1560,10 +1554,39 @@ $
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/application_controller.rb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/shared/_error_messages.html.erb
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  46  1  ~/.vim/.gitmodules
--'  47  34  ~/.vim/.gitmodules
+-'  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
+-'  5  69  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
+-'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
+-'  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
+-'  1  0  ~/.vim/gvimrc
+-'  5  0  ~/.vim/gvimrc
+-'  4  0  ~/.vim/gvimrc
+-'  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 
 # History of marks within files (newest to oldest):
+
+> ~/.vim/config/ui_tweaks.vim
+	"	19	13
+	^	19	14
+	.	19	13
+	+	18	24
+	+	19	13
+
+> ~/test.txt
+	"	1	0
+	^	1	0
+
+> ~/Downloads/Pulp Fiction (1994) 720p BrRip AAC x264 - LOKI/If you like my work.txt
+	"	1	0
+
+> ~/.vim/gvimrc
+	"	1	0
+	^	5	29
+	.	4	0
+	+	5	0
+	+	4	0
+	+	4	0
 
 > ~/.vim/.git/config
 	"	33	0
@@ -1576,12 +1599,6 @@ $
 	"	46	1
 	.	47	0
 	+	47	0
-
-> ~/.vim/gvimrc
-	"	4	5
-	^	5	29
-	.	5	0
-	+	5	0
 
 > ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 	"	77	0
@@ -3123,26 +3140,3 @@ $
 	.	7	0
 	+	8	0
 	+	7	0
-
-> ~/Dropbox/src/rails/hello_app/app/controllers/application_controller.rb
-	"	11	38
-	^	11	39
-	.	11	38
-	+	8	0
-	+	7	31
-	+	9	0
-	+	13	0
-	+	10	12
-	+	11	38
-
-> ~/Downloads/diff2
-	"	1	0
-
-> ~/Downloads/diff1
-	"	1	0
-	^	1	1
-	.	1	0
-	+	1	362
-	+	1	220
-	+	1	362
-	+	1	0

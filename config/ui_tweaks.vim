@@ -15,6 +15,8 @@ if $TERM_PROGRAM =~ "iTerm"
   " Enable the appropriate cursor shape (vert. line) in insert mode 
   let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
   let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+  " Enable 256 color mode
+  set t_Co=256
   
   " Italicize comments
   highlight Comment cterm=italic
