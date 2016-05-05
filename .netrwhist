@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='C:/Users/ryan/vimfiles/indent'
 let g:netrw_dirhist_2='/Users/rlue/Dropbox/Backup/.vim/ftplugin'
 let g:netrw_dirhist_3='/Users/rlue/Dropbox/Backup/Unix/rlue/.vim/bundle/vim-sensible'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/Users/rlue/Dropbox/Backup/Unix/rlue/.vim/config/plugins'
 let g:netrw_dirhist_6='/Users/rlue/Dropbox/src/ruby/rpcfn'
 let g:netrw_dirhist_7='/Users/rlue/Dropbox/Work/THAT/Marketing/Strategy/SEO'
 let g:netrw_dirhist_8='/Users/rlue/Dropbox/Backup/Unix/rlue/.vim/ftplugin'
+let g:netrw_dirhist_9='/Users/rlue/.lftp'
