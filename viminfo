@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/ruby
+~MSle0~/rpc
 
 # Last Substitute Search Pattern:
 ~MSle0&def
@@ -17,6 +17,18 @@
 $
 
 # Command Line History (newest to oldest):
+:vsp /Users/rlue/Downloads/To\ Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
+:e Downloads/To\ Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
+:set bg=dark
+:echo g:solarized_termtrans
+:let g:solarized_termtrans=1
+::enew
+:e ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+:vsp /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/callback.rb
+:!ls callback.rb
+:e config.rb
+:e aggregator.rb
+:set filetype=markdown
 :bd
 :w ~/.vim/ftplugin/python.vim
 :enew
@@ -26,7 +38,6 @@ $
 :e 
 :e /Users/rlue/.lftp/bookmarks
 :set bg=light
-:set filetype=markdown
 :set guifont=Source\ Code\ Pro:h19
 :set guifont=PragmataPro:h17
 :e /Users/rlue/.vim/gvimrc
@@ -106,7 +117,6 @@ $
 :sp /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/about.html.erb
 :sp /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/help.html.erb
 :e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/help.html.erb
-:set bg=dark
 :e Dropbox/Public/html/reddit/AndroidManifest.xml
 :e Downloads/AndroidManifest.xml
 :sav! Dropbox/Notes/Planning/remodel.md
@@ -1007,18 +1017,9 @@ $
 :e Copy/Sell\ Sheets/ChillTHAT-Platter.md
 :e /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/ChillTHAT-Mini.md
 :h fileformat
-:e new
-:set fileformats?
-:sav /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/FreezTHAT.md
-:saveas /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/0-Template.md
-:sav /Users/rlue/Dropbox/Work/Copy/Sell Sheets/0-Template.md
-:w /Users/rlue/Dropbox/Work/Copy/Sell Sheets/
-:sav /Users/rlue/Dropbox/Work/Copy/Sell Sheets/FreezTHAT.md
-:e /Users/rlue/Dropbox/Work/Copy/Packaging/FreezTHAT.md
-:b 1
-:sav /Users/rlue/Dropbox/Work/Copy/Manuals/HeatTHAT-Gravy.md
 
 # Search String History (newest to oldest):
+?/rpc
 ?/ruby
 ?/pennb
 ? @$
@@ -1420,24 +1421,41 @@ $
 	
 	
 	Qvus€kb€kbisual
-""-	CHAR	0
-	ruby
+"-	CHAR	0
+		
 
 # global variables:
 
 # File marks:
-'0  3  0  ~/.bashrc
-'1  1  0  ~/.bashrc
-'2  1  21  ~/src/python/solo/hello-word.py
-'3  10  0  ~/.bashrc
-'4  1  0  ~/.irssi/config
-'5  1  0  ~/.ssh/config
-'6  1  30  ~/.lftp/bookmarks
-'7  4  54  ~/.lftp/rc
-'8  1  0  .vim/config/ui_tweaks.vim
-'9  19  13  ~/.vim/config/ui_tweaks.vim
+'0  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
+'1  1  0  ~/.lftp/rc
+'2  14  12  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+'3  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+'4  38  0  ~/src/ruby/transmission-rss/transmission-rss.conf.example
+'5  323  0  ~/Downloads/products_export.csv
+'6  3  0  ~/.bashrc
+'7  1  0  ~/.bashrc
+'8  1  21  ~/src/python/solo/hello-word.py
+'9  10  0  ~/.bashrc
 
 # Jumplist (newest first):
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
+-'  7  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
+-'  1  0  ~/.lftp/rc
+-'  14  12  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+-'  42  23  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  61  46  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  8  60  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  114  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  38  0  ~/src/ruby/transmission-rss/transmission-rss.conf.example
+-'  1  0  ~/src/ruby/transmission-rss/transmission-rss.conf.example
+-'  323  0  ~/Downloads/products_export.csv
+-'  31  0  ~/Downloads/products_export.csv
+-'  1  0  ~/Downloads/products_export.csv
 -'  1  0  ~/.vim/ftplugin/ruby.vim
 -'  1  0  ~/.vim/config/mappings.vim
 -'  1  0  ~/src/python/solo/hello-word.py
@@ -1451,7 +1469,6 @@ $
 -'  1  0  ~/.irssi/config
 -'  1  0  ~/.ssh/config
 -'  1  30  ~/.lftp/bookmarks
--'  1  0  ~/.lftp/rc
 -'  4  54  ~/.lftp/rc
 -'  1  0  ~/.lftp
 -'  1  0  .vim/config/ui_tweaks.vim
@@ -1519,15 +1536,39 @@ $
 -'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
 -'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
--'  13  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  11  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  13  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
+-'  14  12  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
+	"	20	0
+
+> ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
+	"	1	0
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+	"	1	0
+
+> ~/.lftp/rc
+	"	1	0
+	^	4	55
+	.	4	54
+	+	4	54
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+	"	14	12
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/callback.rb
+	"	1	0
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+	"	1	0
+
+> ~/src/ruby/transmission-rss/transmission-rss.conf.example
+	"	38	0
+
+> ~/Downloads/products_export.csv
+	"	323	0
 
 > ~/src/python/solo/hello-word.py
 	"	1	0
@@ -1561,12 +1602,6 @@ $
 	+	3	28
 	+	4	24
 	+	2	0
-
-> ~/.lftp/rc
-	"	1	0
-	^	4	55
-	.	4	54
-	+	4	54
 
 > ~/.lftp/bookmarks
 	"	1	30
@@ -2882,102 +2917,3 @@ $
 	+	7	26
 	+	8	16
 	+	7	0
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/machine_specific.vim
-	"	1	0
-	^	3	21
-	.	6	0
-	+	2	0
-	+	1	29
-	+	3	20
-	+	6	0
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/workflow.vim
-	"	1	0
-	.	30	0
-	+	31	0
-	+	31	21
-	+	31	11
-	+	31	0
-	+	31	0
-	+	31	0
-	+	31	0
-	+	20	0
-	+	20	72
-	+	20	23
-	+	20	8
-	+	20	0
-	+	20	0
-	+	20	0
-	+	20	0
-	+	8	0
-	+	20	0
-	+	9	0
-	+	31	25
-	+	13	16
-	+	31	0
-	+	30	0
-	+	13	0
-	+	11	0
-	+	31	0
-	+	9	1
-	+	10	0
-	+	9	0
-	+	12	16
-	+	10	20
-	+	12	0
-	+	10	19
-	+	11	16
-	+	12	0
-	+	11	5
-	+	12	18
-	+	30	0
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/vimrc
-	"	13	20
-	^	13	21
-	.	13	20
-	+	13	20
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/ui_tweaks.vim
-	"	1	1
-	.	5	0
-	+	5	4
-	+	5	27
-	+	5	0
-
-> ~/Dropbox/Backup/Unix/rlue/.lftp/rc
-	"	2	20
-	^	2	21
-	.	2	19
-	+	3	26
-	+	4	24
-	+	2	19
-	+	1	23
-	+	2	19
-
-> ~/Dropbox/Backup/Unix/rlue/.lftp/bookmarks
-	"	1	42
-	^	1	43
-	.	1	42
-	+	1	42
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/ChillTHAT-Platter.md
-	"	15	0
-
-> ~/Dropbox/Notes/Research Notes/Marketing.md
-	"	37	19
-	^	37	20
-	.	37	19
-	+	67	0
-	+	27	113
-	+	27	116
-	+	38	0
-	+	27	109
-	+	27	196
-	+	29	1
-	+	27	162
-	+	28	0
-	+	30	1
-	+	29	31
-	+	37	19

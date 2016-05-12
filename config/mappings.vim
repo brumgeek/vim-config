@@ -66,13 +66,6 @@ endfor
 nnoremap <Leader>w :update<CR>
 vnoremap <Leader>w <C-c>:update<CR>gv
 
-" Switching Buffers
-" nnoremap <Leader>b :buffer <C-z><S-Tab>
-nnoremap <Leader>bl :ls<CR>:b
-nnoremap <Leader>bp :bp<CR>
-nnoremap <Leader>bn :bn<CR>
-nnoremap <Leader>bd :b#<bar>bd#<CR>
-
 " UI & WINDOW MANAGEMENT
 " Enable full-screen on Windows
 if has('win32')
