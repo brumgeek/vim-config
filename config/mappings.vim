@@ -88,13 +88,9 @@ cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 cnoremap <C-d> <Del>
 
-" Up/down keys navigate screen lines, rather than file lines
-nnoremap <Down> gj
-nnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
-xnoremap <Down> gj
-xnoremap <Up> gk
+" Smart j/k (move by display lines unless a count is provided)
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Left/right keys jump line breaks
 nnoremap <Left> <Backspace>

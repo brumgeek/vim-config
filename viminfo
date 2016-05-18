@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/rpc
+~MSle0~/bd
 
 # Last Substitute Search Pattern:
 ~MSle0&def
@@ -17,9 +17,24 @@
 $
 
 # Command Line History (newest to oldest):
+:help gj
+:set bg=dark
+:h compl-omni
+:set complete?
+:h i_CTRL-N
+:set bg=light
+:bd
+:e /Users/rlue/Downloads/To\ Organize/Work/THAT/Marketing/Copy/Sell\ Sheets/HeatTHAT-Dip.md
+:ls
+:bp
+:bn
+:e /Users/rlue/.vim/config/mappings.vim
+:b#
+:e /Users/rlue/Downloads/To\ Organize/Work/THAT/Marketing/Copy/Sell\ Sheets/HeatTHAT.md
+:sav /Users/rlue/Downloads/To\ Organize/Work/THAT/Marketing/Copy/Sell\ Sheets/HeatTHAT-Teapot.md
+:e Downloads/To\ Organize/Work/THAT/Marketing/Copy/Sell\ Sheets/0-Template.md
 :vsp /Users/rlue/Downloads/To\ Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
 :e Downloads/To\ Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
-:set bg=dark
 :echo g:solarized_termtrans
 :let g:solarized_termtrans=1
 ::enew
@@ -29,15 +44,12 @@ $
 :e config.rb
 :e aggregator.rb
 :set filetype=markdown
-:bd
 :w ~/.vim/ftplugin/python.vim
 :enew
 :set ft?
 :e /Users/rlue/.vim/ftplugin/ruby.vim
-:e /Users/rlue/.vim/config/mappings.vim
 :e 
 :e /Users/rlue/.lftp/bookmarks
-:set bg=light
 :set guifont=Source\ Code\ Pro:h19
 :set guifont=PragmataPro:h17
 :e /Users/rlue/.vim/gvimrc
@@ -214,13 +226,10 @@ $
 :e Backup/Xerox_Fiery.md
 :tabe /Users/rlue/Dropbox/src/ruby/elm-city-craftworks/course-001/samples/part1/ls_tests.rb
 :e src/ruby/elm-city-craftworks/course-001/samples/part1/bin/ruby-ls
-:bp
-:ls
 :b
 :map <Leader>d
 :set gui
 :bd#
-:b#
 :bd6
 :tabe /Users/rlue/Dropbox/src/ruby/elm-city-craftworks/course-001/samples/part1/bin/ruby-ls
 :w|bd
@@ -245,7 +254,6 @@ $
 :e src/ruby/elm-city-craftworks/rcat/tests.rb
 :set filetype=md
 :e Backup/
-:bn
 :CtrlP
 :echo g:ctrlp_map
 :h 'ctrlp'
@@ -1009,16 +1017,9 @@ $
 :e /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/ChillTHAT-Ice-Cream-Maker.md
 :e Kickstarter/HOWTO.md
 :bd | e /Users/rlue/Dropbox/Work/Copy/Website/products/spreaddlc.md
-:set filefomat?
-:e Copy/Website/products/scoopii.md
-:e html/
-:e /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/FreshTHAT.md
-:set filetype=unix
-:e Copy/Sell\ Sheets/ChillTHAT-Platter.md
-:e /Users/rlue/Dropbox/Work/Copy/Sell\ Sheets/ChillTHAT-Mini.md
-:h fileformat
 
 # Search String History (newest to oldest):
+?/bd
 ?/rpc
 ?/ruby
 ?/pennb
@@ -1362,38 +1363,32 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	nnoremap <Leader>x :w <bar> !ruby %<CR>
-"1	LINE	0
-	PATH="/Users/rlue/perl5/bin${PATH+:}${PATH}"; export PATH;
-	PERL5LIB="/Users/rlue/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-	PERL_LOCAL_LIB_ROOT="/Users/rlue/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-	PERL_MB_OPT="--install_base \"/Users/rlue/perl5\""; export PERL_MB_OPT;
-	PERL_MM_OPT="INSTALL_BASE=/Users/rlue/perl5"; export PERL_MM_OPT;
-	
-"2	LINE	0
-	* UVA
-	  $44k
+"0	CHAR	0
+	up/down motions
+""1	LINE	0
+	" Up/down keys navigate screen lines, rather than file line
+"2	CHAR	0
+	s
+	" nnoremap <Down> gj
+	" nnoremap <Up> gk
+	" inoremap <Down> <C-o>gj
+	" inoremap <Up> <C-o>gk
+	" xnoremap <Down> gj
+	" xnoremap <Up> gk
 "3	LINE	0
-	* UMich Ann Arbor
-	  $43.5k
+	" Up/down keys navigate screen lines, rather than file lines
 "4	LINE	0
-	* UC Berkeley  
-	  $38k
+	
 "5	LINE	0
-	* UNC Chapel Hill  
-	  $33.5k
+	    set ftp:ssl-allow no
 "6	LINE	0
-	* UNC Chapel Hill  
-	  $33.5k
+	    set mirror:use-pget-n 5
 "7	LINE	0
-	He joined Gixia Group in 2014, where he lent his talents not only in management and personnel development, but also in bringing our young kitchenware brand and smart home platform to the international market.
-	
+	The Aficionado's Scoop
 "8	LINE	0
-	Meiâ€™s interdisciplinary academic background spans engineering, business, and management. He has an MBA with a specialization in marketing and product management in high-tech. 
-	
+	It Just Works.
 "9	LINE	0
-	
+	Ice Cream Has Never Looked Better.
 "a	CHAR	0
 	
 "c	CHAR	0
@@ -1422,23 +1417,57 @@ $
 	
 	Qvus€kb€kbisual
 "-	CHAR	0
-		
+	up/down motions
 
 # global variables:
 
 # File marks:
-'0  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
-'1  1  0  ~/.lftp/rc
-'2  14  12  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
-'3  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
-'4  38  0  ~/src/ruby/transmission-rss/transmission-rss.conf.example
-'5  323  0  ~/Downloads/products_export.csv
-'6  3  0  ~/.bashrc
-'7  1  0  ~/.bashrc
-'8  1  21  ~/src/python/solo/hello-word.py
-'9  10  0  ~/.bashrc
+'0  94  0  ~/.vim/config/mappings.vim
+'1  19  14  ~/Scripts/seedbox_pull.sh
+'2  2  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
+'3  21  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+'4  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
+'5  1  0  ~/.lftp/rc
+'6  14  12  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+'7  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+'8  38  0  ~/src/ruby/transmission-rss/transmission-rss.conf.example
+'9  323  0  ~/Downloads/products_export.csv
 
 # Jumplist (newest first):
+-'  94  0  ~/.vim/config/mappings.vim
+-'  92  0  ~/.vim/config/mappings.vim
+-'  1  0  ~/.vim/config/mappings.vim
+-'  19  14  ~/Scripts/seedbox_pull.sh
+-'  9  0  ~/Scripts/seedbox_pull.sh
+-'  8  0  ~/Scripts/seedbox_pull.sh
+-'  4  25  ~/Scripts/seedbox_pull.sh
+-'  3  13  ~/Scripts/seedbox_pull.sh
+-'  2  0  ~/Scripts/seedbox_pull.sh
+-'  2  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
+-'  1  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
+-'  21  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  11  203  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  6  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  7  169  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  5  5  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  13  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  3  27  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  5  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  14  4  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  12  8  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  15  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  24  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  18  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  29  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/0-Template.md
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/0-Template.md
+-'  2  6  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  69  0  ~/.vim/config/mappings.vim
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT.md
 -'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
 -'  7  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
 -'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
@@ -1457,7 +1486,6 @@ $
 -'  31  0  ~/Downloads/products_export.csv
 -'  1  0  ~/Downloads/products_export.csv
 -'  1  0  ~/.vim/ftplugin/ruby.vim
--'  1  0  ~/.vim/config/mappings.vim
 -'  1  0  ~/src/python/solo/hello-word.py
 -'  1  34  ~/.vim/ftplugin/python.vim
 -'  2  0  ~/.vim/ftplugin/python.vim
@@ -1484,61 +1512,141 @@ $
 -'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
 -'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
 -'  13  2  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/models/user.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  11  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  13  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  16  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  20  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/.gitmodules
--'  22  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  23  17  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  14  64  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
--'  8  32  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/shared/_error_messages.html.erb
--'  21  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/static_pages_controller_test.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/application_helper.rb
--'  4  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/static_pages_controller.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/application_controller.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/shared/_error_messages.html.erb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  6  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/show.html.erb
--'  5  69  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/helpers/users_helper.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/environments/production.rb
--'  33  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/users_signup_test.rb
--'  13  37  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  14  22  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/controllers/users_controller.rb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/integration/.keep
--'  22  64  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  9  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  8  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  10  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  7  30  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  23  6  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/new.html.erb
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/layouts/application.html.erb
--'  1  7  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/create.html.erb
--'  2  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/create.html.erb
--'  1  0  .vim/config/ui_tweaks.vim
--'  19  13  ~/.vim/config/ui_tweaks.vim
--'  1  0  ~/.vim/config/ui_tweaks.vim
--'  1  0  ~/test.txt
--'  1  0  ~/Downloads/Pulp Fiction (1994) 720p BrRip AAC x264 - LOKI/If you like my work.txt
--'  1  0  ~/.vim/gvimrc
--'  5  0  ~/.vim/gvimrc
--'  4  0  ~/.vim/gvimrc
--'  77  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
--'  1  0  ~/Dropbox/Backup/Unix/rlue/.vim/config/mappings.vim
--'  27  5  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
--'  1  0  ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/Gemfile
--'  14  12  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+-'  21  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  11  203  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  6  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  7  169  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  5  5  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  13  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  3  27  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+-'  5  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  14  4  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+-'  19  14  ~/Scripts/seedbox_pull.sh
+-'  9  0  ~/Scripts/seedbox_pull.sh
+-'  8  0  ~/Scripts/seedbox_pull.sh
+-'  4  25  ~/Scripts/seedbox_pull.sh
 
 # History of marks within files (newest to oldest):
+
+> ~/.vim/config/mappings.vim
+	"	94	0
+	^	91	62
+	.	94	0
+	+	69	0
+	+	92	0
+	+	93	53
+	+	92	0
+	+	94	59
+	+	94	60
+	+	94	59
+	+	92	0
+	+	94	0
+	+	91	61
+	+	94	0
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/motion.txt
+	"	283	56
+
+> ~/ControlP
+	"	10	0
+	.	2	0
+	+	2	0
+
+> ~/Scripts/seedbox_pull.sh
+	"	19	14
+	^	26	0
+	.	19	0
+	+	7	23
+	+	2	0
+	+	3	18
+	+	4	28
+	+	5	15
+	+	6	39
+	+	7	25
+	+	27	0
+	+	9	0
+	+	8	0
+	+	26	0
+	+	19	0
+	+	19	0
+
+> ~/.lftp/rc
+	"	3	20
+	^	1	23
+	.	2	0
+	+	5	54
+	+	2	35
+	+	1	22
+	+	2	0
+
+> ~/Downloads/test.sh
+	"	5	26
+	^	5	27
+	.	5	26
+	+	4	7
+	+	3	31
+	+	5	26
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/insert.txt
+	"	968	21
+
+> ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
+	"	2	0
+
+> ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
+	"	21	0
+	^	20	0
+	.	20	0
+	+	1	27
+	+	2	62
+	+	1	26
+	+	2	0
+	+	1	30
+	+	2	4
+	+	3	62
+	+	2	0
+	+	1	31
+	+	22	0
+	+	21	19
+	+	17	0
+	+	18	0
+	+	14	0
+	+	15	0
+	+	14	44
+	+	5	126
+	+	5	126
+	+	5	171
+	+	5	358
+	+	1	31
+	+	3	27
+	+	1	31
+	+	3	31
+	+	13	0
+	+	9	0
+	+	5	125
+	+	5	126
+	+	8	0
+	+	5	125
+	+	5	205
+	+	6	0
+	+	5	150
+	+	9	34
+	+	11	203
+	+	20	0
+
+> ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/0-Template.md
+	"	20	0
+	.	21	0
+	+	21	0
+
+> ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT.md
+	"	1	0
+
+> ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
+	"	1	0
 
 > ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
 	"	20	0
@@ -1548,12 +1656,6 @@ $
 
 > ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
 	"	1	0
-
-> ~/.lftp/rc
-	"	1	0
-	^	4	55
-	.	4	54
-	+	4	54
 
 > ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
 	"	14	12
@@ -1575,9 +1677,6 @@ $
 	^	1	22
 	.	1	21
 	+	1	21
-
-> ~/.vim/config/mappings.vim
-	"	1	0
 
 > ~/.vim/ftplugin/ruby.vim
 	"	1	0
@@ -2589,331 +2688,3 @@ $
 	+	5	18
 	+	47	16
 	+	49	30
-
-> ~/Dropbox/Public/html/reddit/AndroidManifest.xml
-	"	1	0
-
-> ~/Downloads/AndroidManifest.xml
-	"	332	37
-
-> ~/ControlP
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/bootstrap.sh
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/Vagrantfile
-	"	17	3
-	^	17	4
-	.	17	3
-	+	16	3
-	+	17	3
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/bundle/ctrlp/doc/ctrlp.txt
-	"	1411	26
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Design Awards/2016/IDEA/submission.md
-	"	46	0
-	^	46	350
-	.	46	349
-	+	30	2
-	+	36	2
-	+	42	2
-	+	6	0
-	+	12	0
-	+	18	0
-	+	24	0
-	+	32	0
-	+	36	0
-	+	38	0
-	+	41	0
-	+	44	0
-	+	9	0
-	+	15	0
-	+	22	0
-	+	30	0
-	+	3	0
-	+	1	0
-	+	2	31
-	+	4	3
-	+	10	0
-	+	16	0
-	+	22	0
-	+	30	0
-	+	36	0
-	+	42	0
-	+	18	17
-	+	24	87
-	+	25	45
-	+	24	75
-	+	18	8
-	+	24	78
-	+	25	48
-	+	26	81
-	+	38	118
-	+	44	17
-	+	44	0
-	+	44	132
-	+	44	337
-	+	44	126
-	+	1	5
-	+	8	0
-	+	8	135
-	+	7	0
-	+	5	0
-	+	15	0
-	+	11	0
-	+	17	0
-	+	23	0
-	+	31	0
-	+	37	0
-	+	43	0
-	+	13	0
-	+	14	0
-	+	14	165
-	+	14	0
-	+	14	181
-	+	14	0
-	+	14	166
-	+	14	36
-	+	14	186
-	+	14	0
-	+	14	420
-	+	14	108
-	+	14	301
-	+	14	459
-	+	14	0
-	+	14	458
-	+	14	0
-	+	22	321
-	+	30	645
-	+	36	198
-	+	40	313
-	+	48	435
-	+	20	317
-	+	20	130
-	+	21	0
-	+	20	258
-	+	20	0
-	+	20	450
-	+	22	0
-	+	20	329
-	+	28	389
-	+	28	0
-	+	28	465
-	+	28	400
-	+	28	496
-	+	28	441
-	+	28	675
-	+	30	0
-	+	34	203
-	+	36	0
-	+	40	193
-	+	46	134
-	+	46	53
-	+	46	0
-	+	46	272
-	+	14	184
-	+	48	0
-	+	46	349
-
-> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/motion.txt
-	"	436	7
-
-> ~/Dropbox/Notes/Research Notes/Programming.md
-	"	1	0
-	^	36	138
-	.	36	137
-	+	167	4
-	+	167	0
-	+	91	0
-	+	90	0
-	+	62	0
-	+	65	34
-	+	90	0
-	+	65	290
-	+	78	6
-	+	82	28
-	+	69	17
-	+	87	6
-	+	73	8
-	+	83	19
-	+	86	8
-	+	65	80
-	+	65	302
-	+	70	21
-	+	83	20
-	+	77	8
-	+	79	4
-	+	80	95
-	+	80	0
-	+	80	168
-	+	85	14
-	+	69	16
-	+	82	0
-	+	69	12
-	+	82	15
-	+	70	26
-	+	71	23
-	+	85	19
-	+	83	39
-	+	84	33
-	+	83	39
-	+	84	19
-	+	70	35
-	+	83	41
-	+	84	16
-	+	85	28
-	+	72	25
-	+	75	23
-	+	76	10
-	+	75	15
-	+	76	19
-	+	75	16
-	+	76	24
-	+	80	99
-	+	88	4
-	+	89	75
-	+	82	15
-	+	89	0
-	+	89	144
-	+	42	32
-	+	44	162
-	+	46	78
-	+	52	2
-	+	51	6
-	+	52	42
-	+	52	1
-	+	53	69
-	+	50	53
-	+	51	2
-	+	50	6
-	+	51	0
-	+	52	0
-	+	48	62
-	+	42	37
-	+	61	46
-	+	59	231
-	+	8	85
-	+	18	1
-	+	27	41
-	+	28	7
-	+	27	42
-	+	29	35
-	+	30	1
-	+	24	38
-	+	32	16
-	+	27	45
-	+	29	27
-	+	25	0
-	+	30	42
-	+	18	62
-	+	23	0
-	+	10	23
-	+	22	6
-	+	21	12
-	+	20	0
-	+	23	4
-	+	23	0
-	+	12	113
-	+	27	16
-	+	16	41
-	+	17	0
-	+	16	49
-	+	36	115
-	+	40	16
-	+	35	0
-	+	36	137
-
-> ~/Dropbox/Backup/Unix/rlue/.vim/config/misc.vim
-	"	1	0
-	.	7	0
-	+	7	26
-	+	8	16
-	+	7	0
