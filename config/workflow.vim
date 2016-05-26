@@ -1,6 +1,10 @@
 " This file modifies vim's basic editing environment: the way it handles
 " buffers, loads new files, etc.
 
+set nobackup
+set nowritebackup
+set noswapfile
+
 " store viminfo within .vim/
 if &viminfo !~ ',n'
   let &viminfo .= ',n'.fnamemodify(expand("$MYVIMRC"),":p:h").'/viminfo'

@@ -8,15 +8,46 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/e 
+~MSle0~/Client.new
 
 # Last Substitute Search Pattern:
 ~MSle0&Bram
 
 # Last Substitute String:
-$~
+$
 
 # Command Line History (newest to oldest):
+:h shortmess
+:h ~
+:h tildeop
+:h tiledop
+:e /Users/rlue/.vim/config/workflow.vim
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/version.rb
+:b12
+:ls
+:b *
+:b*
+:e /Users/rlue/src/ruby/transmission-rss/bin/transmission-add-file
+:e /Users/rlue/src/ruby/transmission-rss/bin/transmission-rss
+:e 
+:bp
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+:h zz
+:!ag 
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+:e transmission-rss/[
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/log.rb
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/feed.rb
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/hash.rb
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/seen_file.rb
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss/core_ext/object.rb
+:sp
+:b3
+:vsp
+:e /Users/rlue/src/ruby/transmission-rss/lib/transmission-rss.rb
+:vsp /Users/rlue/Downloads/tmp/method_lookup_module.rb
+:e load2.rb
 :echo hostname()
 :vsp /Users/rlue/.vim/gvimrc
 :e /Users/rlue/.vim/config/ui_tweaks.vim
@@ -61,7 +92,6 @@ $~
 :echo strftime('%Y')
 :echo =strftime('%Y')
 :scriptnames
-:e 
 :visual
 :h :visual
 :h ex
@@ -75,11 +105,9 @@ $~
 :normal de
 :reg a
 :enew
-:sp
 :reg b
 :reg
 :.
-:ls
 :USA
 :h CTRL-R
 :help @=
@@ -121,7 +149,6 @@ $~
 :set complete?
 :h i_CTRL-N
 :e /Users/rlue/Downloads/To\ Organize/Work/THAT/Marketing/Copy/Sell\ Sheets/HeatTHAT-Dip.md
-:bp
 :bn
 :e /Users/rlue/.vim/config/mappings.vim
 :b#
@@ -187,7 +214,6 @@ $~
 :e config/routes.rb
 :e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/controllers/users_controller_test.rb
 :e /Users/rlue/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/static_pages/home.html.erb
-:b3
 :b4
 :b1
 :e  
@@ -243,7 +269,6 @@ $~
 :e Dropbox/Work/THAT/Marketing/Copy/Design\ Awards/2016/
 :set bg=linght
 :e Dropbox/Notes/Research\ Notes/Programming.md
-:e /Users/rlue/.vim/config/workflow.vim
 :bd!
 :sp /Users/rlue/.vim/config/misc.vim
 :colorscheme solarized
@@ -786,7 +811,6 @@ $~
 :buffer *
 :e Kickstarter/lessons.md
 :h :buffer
-:b*
 :h :sbuffer
 :h g
 :help marks
@@ -801,7 +825,6 @@ $~
 :h CTRL-^
 :h '
 :e ../../Copy/Sell\ Sheets/FreezTHAT.md
-:vsp
 :e product-page.md
 :cd FreezTHAT/
 :!mkdir FreezTHAT
@@ -994,31 +1017,26 @@ $~
 :set encoding=windows
 :set encoding=windows-1252
 :tabe ~/Downloads/行事曆列印懶人包-單面/列印說明.txt
-:e ~/Downloads/flags16.css
-:e ~/Downloads/region-switcher.html
-:w ~/Dropbox/src/reflections.md
-:e ../src/html/htmldog.html
-:h emmet
-:vsp ~/Dropbox/Work/.mail/signature.html
-:set columns=40
-:set columns 90
-:h 'columns'
-:h /zero-width
-:h emmet-vim
-:e /Users/rlue/Dropbox/src/html/
-:sp ~/Downloads/Selectors,\ Properties,\ and\ Values\ \|\ HTML\ Dog.html
-:vsp /Users/rlue/Dropbox/src/html/htmldog.html
-:e htmldog.css
-:cd src/html/
-:set filetype=css
-:h CTRL-W
-:h C_w
-:e /Users/rlue/Dropbox/Work/Copy/Packaging/ScoopTHAT-Paddle.md
-:h :tab
-:h tab
-:1t 5
 
 # Search String History (newest to oldest):
+?/Client.new
+?/rpc
+?/@
+?/feeds
+?/config
+?/default
+?/privileges
+?/fork
+?/log_target
+?/merge
+?/load
+?/formatter
+?/sev
+?/Logger
+?/debug
+?/instance
+?/version
+? @$
 ??e 
 ?/_
 ?/com
@@ -1029,10 +1047,8 @@ $~
 ? is
 ??pwd
 ?/bd
-?/rpc
 ?/ruby
 ?/pennb
-? @$
 ?/‘
 ?/'
 ?/commentary
@@ -1240,7 +1256,6 @@ $~
 ?/message
 ?/location-redirect
 ?/s
-?/load
 ?/redirects
 ?/mapurls
 ?/catchallcoun
@@ -1302,7 +1317,6 @@ $~
 ?/\.i
 ?/.i
 ?/ssdt-hack.i
-?/@
 ?/flags
 ?/build
 ?/SSDT-HACK.i
@@ -1340,7 +1354,6 @@ $~
 ?/:up
 ?/hdmi
 ?/AAA
-?/debug
 ?/ig-plat
 ?/ig-pla
 ?/細細
@@ -1378,26 +1391,32 @@ $~
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	set guifont=Source\ Code\ Pro\ Light:h18
-""1	LINE	0
-	endif
+""0	CHAR	0
+	ss
+"1	LINE	0
+	        'rpc_path' => '/transmission/rpc',
 "2	LINE	0
-	if has('mac')
+	      end
 "3	LINE	0
-	" Set font
+	      puts "#{self.name}"
 "4	LINE	0
-	endif
+	
 "5	LINE	0
-	  set guifont=Source\ Code\ Pro\ Light:h18
+	  def test_method
+	    puts "a"
+	  end
+	
+	  def test_method
+	    puts "b"
+	  end
 "6	LINE	0
-	elseif has('win32')
+	endif
 "7	LINE	0
-	    set guifont=Source\ Code\ Pro\ Light:h18
+	if has('mac')
 "8	LINE	0
-	  else
+	" Set font
 "9	LINE	0
-	set background=dark
+	endif
 "a@	CHAR	0
 	f1ce=1986-"
 "b	CHAR	0
@@ -1428,119 +1447,298 @@ $~
 	
 	Qvus�kb�kbisual
 "-	CHAR	0
-	 
+	ss
 
 # global variables:
 
 # File marks:
-'0  11  40  ~/.vim/config/ui_tweaks.vim
-'1  5  0  ~/.vim/gvimrc
-'2  8  0  ~/.vim/gvimrc
-'3  1  0  ~/src/ruby/well-grounded/f2c.rb
-'4  6  3  ~/Downloads/To Organize/Notes/explore-vim.md
-'5  4  6  ~/Downloads/To Organize/Notes/explore-vim.md
-'6  1  0  ~/src/ruby/transmission-rss/bin/transmission-rss
-'7  2  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
-'8  21  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
-'9  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
+'0  4  11  ~/.vim/config/workflow.vim
+'1  105  32  ~/src/ruby/transmission-rss/README.md
+'2  21  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+'3  5  2  ~/src/ruby/transmission-rss/README.md
+'4  6  0  ~/src/ruby/transmission-rss/Gemfile
+'5  1  0  ~/src/ruby/transmission-rss/Rakefile
+'6  8  6  ~/Downloads/method_missing.rb
+'7  8  4  ~/Downloads/tmp/method_lookup_module.rb
+'8  2  15  ~/src/ruby/well-grounded/1.3-load-require/load1.rb
+'9  1  21  ~/src/ruby/well-grounded/1.3-load-require/load2.rb
 
 # Jumplist (newest first):
--'  11  40  ~/.vim/config/ui_tweaks.vim
--'  16  40  ~/.vim/config/ui_tweaks.vim
--'  1  0  ~/.vim/config/ui_tweaks.vim
--'  5  0  ~/.vim/gvimrc
--'  140  21  /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/gui.txt
--'  132  14  /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/gui.txt
--'  60  35  /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/gui.txt
--'  1  0  ~/.vim/gvimrc
--'  8  0  ~/.vim/gvimrc
--'  22  1  ~/.vim/gvimrc
--'  6  8  ~/.vim/gvimrc
--'  25  0  ~/.vim/gvimrc
--'  11  0  ~/.vim/gvimrc
--'  7  0  ~/.vim/gvimrc
--'  14  0  ~/.vim/config/ui_tweaks.vim
--'  1  0  ~/src/ruby/well-grounded/c2f.rb
--'  1  0  ~/src/ruby/well-grounded/f2c.rb
--'  6  3  ~/Downloads/To Organize/Notes/explore-vim.md
--'  7  0  ~/Downloads/To Organize/Notes/explore-vim.md
--'  4  0  ~/Downloads/To Organize/Notes/explore-vim.md
--'  1  0  ~/Downloads/To Organize/Notes/explore-vim.md
--'  1  0  ~/src/ruby/transmission-rss/bin/transmission-rss
--'  170  0  ~/src/ruby/transmission-rss/bin/transmission-rss
--'  1  0  ~/.vim/vimrc
--'  1  0  ~/.vim/config/misc.vim
--'  2  0  ~/.vim/config/machine_specific.vim
--'  2  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
--'  1  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
--'  21  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  11  203  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  6  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  7  169  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  5  5  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  13  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  3  27  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  5  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  14  4  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  12  8  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  15  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  24  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  18  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  29  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/0-Template.md
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/0-Template.md
--'  2  6  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  69  0  ~/.vim/config/mappings.vim
--'  1  0  ~/.vim/config/mappings.vim
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT.md
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
--'  7  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatgravy.md
--'  1  0  ~/.lftp/rc
--'  14  12  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
--'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
--'  42  23  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  4  11  ~/.vim/config/workflow.vim
+-'  1  0  ~/.vim/config/machine_specific.vim
+-'  105  32  ~/src/ruby/transmission-rss/README.md
+-'  1  0  ~/src/ruby/transmission-rss/README.md
+-'  21  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  65  81  ~/src/ruby/transmission-rss/bin/transmission-add-file
+-'  1  0  ~/src/ruby/transmission-rss/bin/transmission-add-file
+-'  132  81  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  64  0  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  56  6  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  42  16  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  91  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  90  22  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  83  47  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  82  13  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  73  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  70  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  30  16  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  14  2  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  15  19  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  16  20  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  19  22  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  22  25  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  23  7  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  35  35  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  54  22  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
 -'  61  46  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
 -'  8  60  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
--'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  16  6  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  70  25  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  71  18  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  69  12  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  27  0  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss.rb
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss
+-'  5  2  ~/src/ruby/transmission-rss/README.md
+-'  6  0  ~/src/ruby/transmission-rss/Gemfile
+-'  1  0  ~/src/ruby/transmission-rss/Gemfile
+-'  21  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  65  81  ~/src/ruby/transmission-rss/bin/transmission-add-file
+-'  1  0  ~/src/ruby/transmission-rss/bin/transmission-add-file
+-'  132  81  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  64  0  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  56  6  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  42  16  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  91  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  90  22  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  83  47  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  82  13  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  73  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  70  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  30  16  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  14  2  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  15  19  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  16  20  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  19  22  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  22  25  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  23  7  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  35  35  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
 -'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
--'  114  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
--'  38  0  ~/src/ruby/transmission-rss/transmission-rss.conf.example
--'  1  0  ~/src/ruby/transmission-rss/transmission-rss.conf.example
--'  323  0  ~/Downloads/products_export.csv
--'  31  0  ~/Downloads/products_export.csv
--'  1  0  ~/Downloads/products_export.csv
--'  1  0  ~/src/ruby/transmission-rss/bin/transmission-rss
--'  170  0  ~/src/ruby/transmission-rss/bin/transmission-rss
--'  1  0  ~/.vim/vimrc
--'  1  0  ~/.vim/config/misc.vim
--'  2  0  ~/.vim/config/machine_specific.vim
--'  2  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
--'  1  0  ~/src/ruby/transmission-rss/contrib/transmission-rss.init.sh
--'  21  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  11  203  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  6  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  7  169  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  5  5  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  13  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  1  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  3  27  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  5  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  14  4  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  12  8  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  20  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  15  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  24  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Dip.md
--'  18  0  ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Sell Sheets/HeatTHAT-Teapot.md
--'  9  0  ~/.vim/gvimrc
+-'  54  22  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  61  46  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  8  60  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  16  6  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  70  25  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  71  18  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  69  12  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  27  0  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss.rb
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss
+-'  6  0  ~/src/ruby/transmission-rss/Gemfile
+-'  1  0  ~/src/ruby/transmission-rss/Gemfile
+-'  105  32  ~/src/ruby/transmission-rss/README.md
+-'  1  0  ~/src/ruby/transmission-rss/README.md
+-'  21  0  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  65  81  ~/src/ruby/transmission-rss/bin/transmission-add-file
+-'  1  0  ~/src/ruby/transmission-rss/bin/transmission-add-file
+-'  132  81  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  64  0  ~/src/ruby/transmission-rss/bin/transmission-rss
+-'  56  6  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  42  16  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  91  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  90  22  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  83  47  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  82  13  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  73  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  70  8  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  30  16  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  14  2  ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+-'  15  19  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  16  20  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  19  22  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  22  25  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  23  7  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  35  35  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+-'  1  0  ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/.vim/config/machine_specific.vim
+	"	1	0
+
+> ~/.vim/config/workflow.vim
+	"	4	11
+	^	6	14
+	.	4	0
+	+	6	13
+	+	4	0
+
+> ~/.vim/config/ControlP
+	"	10	0
+	.	2	0
+	+	2	0
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/options.txt
+	"	6651	34
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/change.txt
+	"	317	7
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/message.txt
+	"	776	24
+
+> ~/src/ruby/transmission-rss/README.md
+	"	105	32
+	^	105	33
+	.	105	32
+	+	105	32
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss.rb
+	"	6	26
+
+> ~/src/ruby/transmission-rss/bin/transmission-rss
+	"	132	81
+	^	132	82
+	.	132	81
+	+	132	81
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/core_ext/object.rb
+	"	1	5
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
+	"	42	8
+	^	45	25
+	.	46	42
+	+	48	0
+	+	46	0
+	+	45	24
+	+	46	42
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/version.rb
+	"	1	0
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/seen_file.rb
+	"	12	36
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/log.rb
+	"	20	16
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/hash.rb
+	"	1	0
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/feed.rb
+	"	1	0
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
+	"	21	0
+	^	61	40
+	.	61	39
+	+	42	0
+	+	13	82
+	+	14	60
+	+	42	16
+	+	61	39
+
+> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/scroll.txt
+	"	117	0
+
+> ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
+	"	15	19
+
+> ~/src/ruby/transmission-rss/bin/transmission-add-file
+	"	65	81
+	^	65	82
+	.	65	81
+	+	65	81
+
+> ~/src/ruby/transmission-rss/Gemfile
+	"	6	0
+
+> ~/src/ruby/transmission-rss/Rakefile
+	"	1	0
+
+> ~/Downloads/method_missing.rb
+	"	8	6
+	.	8	0
+	+	1	12
+	+	13	0
+	+	11	0
+	+	4	6
+	+	2	29
+	+	4	37
+	+	10	10
+	+	5	6
+	+	4	12
+	+	3	18
+	+	5	14
+	+	6	24
+	+	6	35
+	+	8	0
+	+	7	0
+	+	8	0
+
+> ~/Downloads/tmp/method_lookup_test.rb
+	"	15	0
+	^	13	22
+	.	15	0
+	+	15	0
+	+	15	9
+	+	15	9
+	+	15	0
+	+	14	9
+	+	13	11
+	+	1	38
+	+	12	0
+	+	14	19
+	+	18	16
+	+	11	0
+	+	13	21
+	+	15	0
+	+	4	0
+	+	15	0
+
+> ~/Downloads/tmp/method_lookup_module.rb
+	"	8	4
+	^	8	5
+	.	8	0
+	+	9	0
+	+	8	0
+
+> ~/src/ruby/well-grounded/1.3-load-require/load1.rb
+	"	2	15
+	^	2	16
+	.	2	15
+	+	3	28
+	+	2	15
+
+> ~/src/ruby/well-grounded/1.3-load-require/load2.rb
+	"	1	21
+	^	1	22
+	.	1	21
+	+	1	21
+
+> ~/src/ruby/well-grounded/c2ffh.rb
+	"	4	17
+	^	4	18
+	.	4	17
+	+	1	38
+	+	2	13
+	+	4	17
+
+> ~/src/ruby/well-grounded/c2f.rb
+	"	1	0
+	^	3	41
+	.	3	40
+	+	2	13
+	+	3	40
+
+> ~/src/ruby/well-grounded/c2fi.rb
+	"	1	0
+	^	3	46
+	.	3	36
+	+	5	0
+	+	3	36
 
 > ~/.vim/config/ui_tweaks.vim
 	"	11	40
@@ -1609,12 +1807,6 @@ $~
 > /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/gui_x11.txt
 	"	172	25
 
-> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/options.txt
-	"	840	7
-
-> ~/src/ruby/well-grounded/c2f.rb
-	"	1	0
-
 > ~/src/ruby/well-grounded/f2c.rb
 	"	1	0
 
@@ -1647,9 +1839,6 @@ $~
 > /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/cmdline.txt
 	"	649	38
 
-> /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/change.txt
-	"	1184	28
-
 > /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/undo.txt
 	"	30	7
 
@@ -1671,25 +1860,10 @@ $~
 > /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/editing.txt
 	"	197	12
 
-> ~/.vim/config/machine_specific.vim
-	"	2	0
-
 > ~/.vim/config/misc.vim
 	"	1	0
 
 > ~/.vim/vimrc
-	"	1	0
-
-> ~/src/ruby/transmission-rss/bin/transmission-rss
-	"	1	0
-
-> ~/src/ruby/transmission-rss/bin/transmission-add-file
-	"	71	0
-
-> ~/src/ruby/transmission-rss/lib/transmission-rss.rb
-	"	8	18
-
-> ~/src/ruby/transmission-rss/lib/transmission-rss/core_ext/object.rb
 	"	1	0
 
 > /opt/homebrew-cask/Caskroom/macvim/7.4.96/MacVim.app/Contents/Resources/vim/runtime/doc/tabpage.txt
@@ -1816,16 +1990,7 @@ $~
 > ~/Downloads/To Organize/Work/THAT/Marketing/Copy/Website/products/heatdip.md
 	"	1	0
 
-> ~/src/ruby/transmission-rss/lib/transmission-rss/client.rb
-	"	1	0
-
-> ~/src/ruby/transmission-rss/lib/transmission-rss/config.rb
-	"	14	12
-
 > ~/src/ruby/transmission-rss/lib/transmission-rss/callback.rb
-	"	1	0
-
-> ~/src/ruby/transmission-rss/lib/transmission-rss/aggregator.rb
 	"	1	0
 
 > ~/src/ruby/transmission-rss/transmission-rss.conf.example
@@ -2355,249 +2520,3 @@ $~
 	+	173	21
 	+	176	0
 	+	175	28
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/app/views/users/create.html.erb
-	"	1	7
-	^	1	8
-	.	1	7
-	+	1	7
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/config/routes.rb
-	"	1	0
-	^	22	18
-	.	22	17
-	+	2	24
-	+	2	0
-	+	2	0
-	+	7	35
-	+	7	0
-	+	9	0
-	+	9	0
-	+	2	0
-	+	2	0
-	+	7	11
-	+	9	12
-	+	9	40
-	+	9	36
-	+	7	34
-	+	7	7
-	+	7	7
-	+	9	7
-	+	9	7
-	+	7	14
-	+	7	13
-	+	9	13
-	+	6	15
-	+	7	0
-	+	9	0
-	+	9	0
-	+	8	0
-	+	9	0
-	+	12	0
-	+	22	17
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/THAT-Gravy.md
-	"	1	0
-	^	15	225
-	.	15	214
-	+	1	21
-	+	1	0
-	+	27	0
-	+	24	0
-	+	15	49
-	+	26	24
-	+	1	10
-	+	1	0
-	+	1	0
-	+	4	0
-	+	10	0
-	+	10	0
-	+	4	5
-	+	23	0
-	+	21	6
-	+	22	3
-	+	10	5
-	+	10	0
-	+	10	12
-	+	19	16
-	+	26	0
-	+	15	0
-	+	16	0
-	+	7	9
-	+	15	92
-	+	14	6
-	+	15	70
-	+	10	0
-	+	9	0
-	+	10	0
-	+	10	0
-	+	10	0
-	+	9	42
-	+	10	0
-	+	9	43
-	+	15	0
-	+	14	12
-	+	15	214
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Manuals/HeatTHAT-Gravy.md
-	"	38	0
-
-> ~/Dropbox/Work/THAT/Marketing/Copy/Packaging/HeatTHAT-Gravy.md
-	"	1	0
-
-> ~/Downloads/bash_to_zsh/test.sh
-	"	3	0
-	^	3	11
-	.	3	0
-	+	8	17
-	+	3	18
-	+	5	40
-	+	3	5
-	+	5	13
-	+	3	3
-	+	5	11
-	+	3	3
-	+	5	11
-	+	3	0
-
-> ~/Downloads/bash_to_zsh/list_PATH_bins.sh
-	"	1	12
-	^	1	13
-	.	1	12
-	+	13	11
-	+	6	2
-	+	5	6
-	+	7	11
-	+	6	0
-	+	5	34
-	+	13	0
-	+	7	12
-	+	12	4
-	+	11	0
-	+	9	0
-	+	10	0
-	+	3	17
-	+	11	0
-	+	1	12
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323071704_add_index_to_users_email.rb
-	"	3	38
-	^	3	38
-	.	3	37
-	+	3	37
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/test/models/user_test.rb
-	"	51	4
-	^	50	4
-	.	51	0
-	+	7	2
-	+	11	0
-	+	9	77
-	+	61	0
-	+	15	0
-	+	14	26
-	+	16	0
-	+	17	20
-	+	19	13
-	+	18	25
-	+	9	4
-	+	14	11
-	+	18	4
-	+	19	15
-	+	23	0
-	+	26	19
-	+	24	0
-	+	17	22
-	+	24	23
-	+	20	0
-	+	21	0
-	+	30	0
-	+	20	24
-	+	30	24
-	+	18	52
-	+	20	50
-	+	30	0
-	+	26	57
-	+	30	55
-	+	42	0
-	+	42	0
-	+	34	96
-	+	37	0
-	+	36	29
-	+	38	81
-	+	40	15
-	+	36	61
-	+	40	56
-	+	26	27
-	+	25	13
-	+	30	46
-	+	29	11
-	+	33	11
-	+	32	3
-	+	28	0
-	+	25	0
-	+	42	16
-	+	42	29
-	+	42	4
-	+	42	0
-	+	42	0
-	+	42	5
-	+	42	64
-	+	42	0
-	+	42	4
-	+	42	4
-	+	42	4
-	+	42	14
-	+	42	6
-	+	48	0
-	+	42	0
-	+	42	0
-	+	45	0
-	+	46	0
-	+	10	68
-	+	60	0
-	+	57	25
-	+	60	0
-	+	58	32
-	+	57	24
-	+	59	24
-	+	38	95
-	+	42	0
-	+	53	0
-	+	53	0
-	+	3	0
-	+	53	0
-	+	52	42
-	+	9	70
-	+	50	0
-	+	51	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323090150_remove_x_fro_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323090129_remove_x_from_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323090104_remove_x_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323090044_remove_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323090019_remove_ivory_canines_to_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323085948_remove_ivory_canines_from_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323085829_delete_ivory_canines_from_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323085655_add_ivory_canines_to_walrus.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323085542_add_password_digest_to_users.rb
-	"	1	0
-
-> ~/Dropbox/src/rails/Hartl-Rails-Tutorial/sample_app/db/migrate/20160323043518_create_users.rb
-	"	1	0
