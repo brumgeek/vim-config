@@ -44,3 +44,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
+[submodule "matchit"]
+	path = matchit
+	url = git://github.com/tmhedberg/matchit.git
