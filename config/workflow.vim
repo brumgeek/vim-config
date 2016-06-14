@@ -27,7 +27,7 @@ set encoding=utf-8           " Set Unicode
 set fileformats=unix,dos,mac " Order of preferred file formats
 
 " %% = working directory of current buffer
-cabbr <expr> %% expand('%:p:h:s?\ ?\\\ ?')
+cabbr <expr> %% expand('%:p:h:gs?\ ?\\\ ?')
 
 " Force .md file extension to Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
