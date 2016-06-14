@@ -1,5 +1,6 @@
 " GUI VIM CONFIGURATION
 
+set guioptions= " Disable GUI chrome 
 set lines=999 columns=85
 set guifont=Source\ Code\ Pro\ Light:h18
 set bg=light
@@ -13,9 +14,6 @@ if hostname() =~ "liberte"
 endif
 
 if has('win32')
-  " Disable GUI chrome 
-  set guioptions=
-  
   " Fix garbled graphical menu text on Chinese (TW) Windows systems
   " if $COMPUTERNAME == "WEI-PC"
   "   so $VIMRUNTIME/delmenu.vim
