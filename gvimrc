@@ -2,10 +2,14 @@
 
 set lines=999 columns=85
 set guifont=Source\ Code\ Pro\ Light:h18
+set bg=light
 
 if hostname() =~ "sardanapalus"
   set guifont=Source\ Code\ Pro\ Light:h19
-  " set guifont=PragmataPro:h17
+endif
+
+if hostname() =~ "liberte"
+  set guifont=Source\ Code\ Pro:h20
 endif
 
 if has('win32')
