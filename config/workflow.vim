@@ -29,6 +29,9 @@ set fileformats=unix,dos,mac " Order of preferred file formats
 " %% = working directory of current buffer
 cabbr <expr> %% expand('%:p:h:gs?\ ?\\\ ?')
 
+set splitbelow
+set splitright
+
 " Force .md file extension to Markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
