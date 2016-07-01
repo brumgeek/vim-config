@@ -1,4 +1,4 @@
-" This file contains custom keybindings
+"" This file contains custom keybindings
 
 " Set leader & other variables
 let mapleader = "\<Space>"
@@ -99,6 +99,11 @@ inoremap <Left> <C-o><Backspace>
 inoremap <Right> <C-o><Space>
 xnoremap <Left> <Backspace>
 xnoremap <Right> <Space>
+
+" MISCELLANEOUS
+
+" Disable Ex mode (per http://www.bestofvim.com/tip/leave-ex-mode-good/)
+nnoremap Q <Nop>
 
 " Switch from Search to Replace super fast!
 " nmap <expr> M ':%s/' . @/ . '//g<LEFT><LEFT>'
