@@ -41,18 +41,23 @@
 [submodule "bundle/vim-autoswap"]
 	path = bundle/vim-autoswap
 	url = https://github.com/gioele/vim-autoswap.git
+	ignore = dirty
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
+	ignore = dirty
 [submodule "bundle/vim-slim"]
 	path = bundle/vim-slim
 	url = git://github.com/slim-template/vim-slim.git
+	ignore = dirty
 [submodule "bundle/vim-textobj-quote"]
 	path = bundle/vim-textobj-quote
 	url = git://github.com/reedes/vim-textobj-quote.git
+	ignore = dirty
 [submodule "bundle/vim-textobj-user"]
 	path = bundle/vim-textobj-user
 	url = git://github.com/kana/vim-textobj-user.git
+	ignore = dirty
 [submodule "bundle/browserlink"]
 	path = bundle/browserlink
 	url = git://github.com/jaxbot/browserlink.vim.git
