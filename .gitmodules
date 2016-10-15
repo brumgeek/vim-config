@@ -56,3 +56,4 @@
 [submodule "bundle/browserlink"]
 	path = bundle/browserlink
 	url = git://github.com/jaxbot/browserlink.vim.git
+	ignore = dirty
