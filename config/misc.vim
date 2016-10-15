@@ -5,5 +5,8 @@ set ignorecase
 set smartcase
 
 " Set _ as a word boundary
-:set iskeyword-=_
+set iskeyword-=_
+
+" Enable recursive :find
+set path+=**
 
