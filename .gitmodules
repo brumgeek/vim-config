@@ -50,3 +50,6 @@
 [submodule "bundle/vim-textobj-quote"]
 	path = bundle/vim-textobj-quote
 	url = git://github.com/reedes/vim-textobj-quote.git
+[submodule "bundle/vim-textobj-user"]
+	path = bundle/vim-textobj-user
+	url = git://github.com/kana/vim-textobj-user.git
