@@ -7,6 +7,3 @@ set smartcase
 " Set _ as a word boundary
 set iskeyword-=_
 
-" Enable recursive :find
-set path+=**
-
