@@ -51,7 +51,7 @@ nnoremap <Leader>k m`O<Esc>``
 nnoremap <Leader>j m`o<Esc>``
 nnoremap <Leader>h i <Esc>l
 nnoremap <Leader>l a <Esc>h
-nnoremap <Leader> i<Esc>`.
+nnoremap <Leader><CR> i<CR><Esc>`.
 
 " More text objects! 
 for char in [ '_', '-', '.', ':', ',', ';', '<bar>', '/', '<bslash>', '*', '+', '%', '`' ]
