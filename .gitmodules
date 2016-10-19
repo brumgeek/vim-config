@@ -62,3 +62,6 @@
 	path = bundle/browserlink
 	url = git://github.com/jaxbot/browserlink.vim.git
 	ignore = dirty
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git://github.com/gabrielelana/vim-markdown.git
