@@ -2,10 +2,6 @@
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
 	ignore = dirty
-[submodule "bundle/emmet-vim"]
-	path = bundle/emmet-vim
-	url = git://github.com/mattn/emmet-vim.git
-	ignore = dirty
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = git://github.com/sjl/gundo.vim.git
@@ -65,3 +61,12 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git://github.com/gabrielelana/vim-markdown.git
+[submodule "bundle/goyo.vim"]
+	path = bundle/goyo.vim
+	url = git://github.com/junegunn/goyo.vim.git
+[submodule "bundle/limelight.vim"]
+	path = bundle/limelight.vim
+	url = git://github.com/junegunn/limelight.vim.git
+[submodule "bundle/vim-two-firewatch"]
+	path = bundle/vim-two-firewatch
+	url = git://github.com/rakr/vim-two-firewatch.git
