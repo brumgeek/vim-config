@@ -33,5 +33,19 @@ set splitbelow
 set splitright
 
 " Force .md file extension to Markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+" " Set Liquid filetype within Jekyll directories
+" function! LiquidInJekyll()
+"   if !empty(glob("_config.yml"))
+"     if match(strpart(@%, 0, 1), '\h') != -1
+"       set filetype=liquid
+"     endif
+"  endif
+" endfunction
+
+" autocmd BufNewFile,BufRead *.html call LiquidInJekyll()
+" autocmd BufNewFile,BufRead *.xml  call LiquidInJekyll()
+" autocmd BufNewFile,BufRead *.css  call LiquidInJekyll()
+" autocmd BufNewFile,BufRead *.js   call LiquidInJekyll()
 
