@@ -1,6 +1,8 @@
 " GUI VIM CONFIGURATION
 
 set guioptions= " Disable GUI chrome 
+colorscheme two-firewatch
+let g:two_firewatch_italics=1
 set lines=999 columns=85
 set guifont=Source\ Code\ Pro\ Light:h18
 set bg=light
