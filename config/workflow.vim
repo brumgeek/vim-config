@@ -26,6 +26,11 @@ set hidden                   " Keep buffers alive when abandoned
 set encoding=utf-8           " Set Unicode
 set fileformats=unix,dos,mac " Order of preferred file formats
 
+" Exclude directories from wildcard expansion on Mac
+if system("uname -s") =~ "Darwin"
+  set wildignore+=*tmp/*,*Applications/*,*Library/*,*Music/*,*Movies/*,*Pictures/*,*.zip 
+endif
+
 " %% = working directory of current buffer
 cabbr <expr> %% expand('%:p:h:gs?\ ?\\\ ?')
 
