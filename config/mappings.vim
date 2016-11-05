@@ -32,19 +32,31 @@ nnoremap Y y$
 " vnoremap . :norm.<CR>
 
 " Easy yank-put from system clipboard
-nnoremap <Leader>y "*y
-nnoremap <Leader>Y "*y$
+nnoremap <Leader>c "*c
+nnoremap <Leader>C "*C
+nnoremap <Leader>d "*d
+nnoremap <Leader>D "*D
 nnoremap <Leader>p "*p
 nnoremap <Leader>P "*P
+nnoremap <Leader>s "*s
+nnoremap <Leader>S "*S
+nnoremap <Leader>y "*y
+nnoremap <Leader>Y "*y$
  if has('mac')
    inoremap <D-v> <C-o>"*p
  elseif has('win32')
    inoremap <C-v> <C-o>"*p
  endif
-vnoremap <Leader>y "*y
-vnoremap <Leader>Y "*y$
+vnoremap <Leader>c "*c
+vnoremap <Leader>C "*C
+vnoremap <Leader>d "*d
+vnoremap <Leader>D "*D
 vnoremap <Leader>p "*p
 vnoremap <Leader>P "*P
+vnoremap <Leader>s "*s
+vnoremap <Leader>S "*S
+vnoremap <Leader>y "*y
+vnoremap <Leader>Y "*y$
 
 " Easy whitespace
 nnoremap <Leader>k m`O<Esc>``
