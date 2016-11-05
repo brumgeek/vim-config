@@ -51,7 +51,7 @@ set ignorecase                    " Search with
 set smartcase                     " smart case recognition
 
 set wildignore+=*tmp/*,*.zip      " Basic exclusions from wildcard expansion
-if system("uname -s") =~ "Darwin" " ...and default directories on a Mac
+if has('mac')                     " ...and default directories on a Mac
   set wildignore+=*Applications/*,*Library/*,*Music/*,*Movies/*,*Pictures/*
 endif
 
