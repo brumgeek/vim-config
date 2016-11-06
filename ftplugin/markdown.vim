@@ -1,3 +1,3 @@
 " Activate Goyo & Limelight
-nnoremap <buffer> <Leader>g :Goyo<CR>
+nnoremap <buffer> <Leader>f :Goyo<CR>
 
