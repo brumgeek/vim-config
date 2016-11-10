@@ -23,6 +23,22 @@ set nobackup                      " Disable auto-backup when overwriting files
 set noswapfile                    " Disable autosave
 set hidden                        " Keep buffers alive when abandoned
 
+" *********************
+" * FILE MANIPULATION *
+" *********************
+
+function! MoveFile(newspec)
+   let old = expand('%')
+   " could be improved:
+   if (old == a:newspec)
+     return 0
+   endif
+   exe 'sav' fnameescape(a:newspec)
+   call delete(old)
+endfunction
+
+command! -nargs=1 -complete=file -bar Mv call MoveFile('<args>')
+
 " *****************
 " * FILE METADATA *
 " *****************
