@@ -1,16 +1,16 @@
 " GUI VIM CONFIGURATION
 
 set guioptions=                           " Disable GUI chrome 
-set guifont=Source\ Code\ Pro\ Light:h18
 colorscheme two-firewatch | let g:two_firewatch_italics=1
 set bg=light
-let g:lightline = { 'colorscheme': 'solarized' }
 set lines=999 columns=85
 
 if hostname() =~ "sardanapalus"
   set guifont=Source\ Code\ Pro\ Light:h19
 elseif hostname() =~ "liberte"
   set guifont=Source\ Code\ Pro:h20
+else
+  set guifont=Source\ Code\ Pro\ Light:h18
 endif
 
 if has('win32')
