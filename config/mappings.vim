@@ -84,9 +84,9 @@ if has('win32')
   map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 endif
 
-" One-press window switching
-nnoremap <Tab> <C-w>w
-nnoremap <S-Tab> <C-w>W
+" " One-press window switching
+" nnoremap <Tab> <C-w>w
+" nnoremap <S-Tab> <C-w>W
 
 " NAVIGATION
 " in Command Mode, from http://stackoverflow.com/a/6923282/4865822
