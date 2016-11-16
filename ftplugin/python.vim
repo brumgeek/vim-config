@@ -1,2 +1,2 @@
-nnoremap <Leader>x :w <bar> !python %<CR>
+nnoremap <Leader>r :w <bar> !python %<CR>
 

@@ -1,3 +1,3 @@
-nnoremap <Leader>C :w <bar> !cucumber<CR>
-nnoremap <Leader>c :w <bar> !cucumber %<CR>
+nnoremap <Leader>R :w <bar> !cucumber<CR>
+nnoremap <Leader>r :w <bar> !cucumber %<CR>
 
