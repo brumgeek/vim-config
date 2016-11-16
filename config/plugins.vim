@@ -57,7 +57,7 @@ function! s:setupHandlers()
   endif
 endfunction
 
-exec "autocmd BufWritePost " . '*.' . join(s:bl_pagefileexts,',*.') . " call s:setupHandlers()"
+exec 'autocmd BufWritePost ' . '*.' . join(s:bl_pagefileexts,',*.') . ' call s:setupHandlers()'
 
 " *************
 " * LIMELIGHT *
