@@ -27,14 +27,29 @@ set hidden                        " Keep buffers alive when abandoned
 " * FILE MANIPULATION *
 " *********************
 
-function! MoveFile(newspec)
-   let old = expand('%')
-   " could be improved:
-   if (old == a:newspec)
+function! MoveFile(dest)
+   let source = expand('%:p')
+   let source_path = fnamemodify(source, ':h')
+   let target = fnamemodify(a:dest, ':p')
+   let target_path = fnamemodify(target, ':h')
+
+   if !isdirectory(target_path)
+     echoerr target_path . ": No such directory"
      return 0
    endif
-   exe 'sav' fnameescape(a:newspec)
-   call delete(old)
+
+   if (source == target || 
+     \ source_path . '/' == target )
+     return 0
+   endif
+
+   if (isdirectory(target))
+     exe 'sav' fnameescape(target) . expand('%:t')
+   else
+     exe 'sav' fnameescape(target)
+   endif
+
+   call delete(source)
 endfunction
 
 command! -nargs=1 -complete=file -bar Mv call MoveFile('<args>')
@@ -72,7 +87,7 @@ if has('mac')                     " ...and default directories on a Mac
 endif
 
 " %% = working directory of current buffer
-cabbr <expr> %% expand('%:p:h:gs?\ ?\\\ ?')
+cabbr <expr> %% fnameescape(expand('%:p:h'))
 
 " ***********
 " * FOLDING *
