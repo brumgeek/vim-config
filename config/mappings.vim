@@ -32,14 +32,8 @@ nnoremap Y y$
 " vnoremap . :norm.<CR>
 
 " Easy yank-put from system clipboard
-nnoremap <Leader>c "*c
-nnoremap <Leader>C "*C
-nnoremap <Leader>d "*d
-nnoremap <Leader>D "*D
 nnoremap <Leader>p "*p
 nnoremap <Leader>P "*P
-nnoremap <Leader>s "*s
-nnoremap <Leader>S "*S
 nnoremap <Leader>y "*y
 nnoremap <Leader>Y "*y$
  if has('mac')
@@ -47,14 +41,8 @@ nnoremap <Leader>Y "*y$
  elseif has('win32')
    inoremap <C-v> <C-o>"*p
  endif
-vnoremap <Leader>c "*c
-vnoremap <Leader>C "*C
-vnoremap <Leader>d "*d
-vnoremap <Leader>D "*D
 vnoremap <Leader>p "*p
 vnoremap <Leader>P "*P
-vnoremap <Leader>s "*s
-vnoremap <Leader>S "*S
 vnoremap <Leader>y "*y
 vnoremap <Leader>Y "*y$
 
@@ -88,6 +76,9 @@ endif
 " nnoremap <Tab> <C-w>w
 " nnoremap <S-Tab> <C-w>W
 
+" FILE MANAGEMENT
+nnoremap <Leader>en :e ~/Documents/Notes/**/
+
 " NAVIGATION
 " in Command Mode, from http://stackoverflow.com/a/6923282/4865822
 cnoremap <C-a> <Home>
@@ -103,14 +94,6 @@ cnoremap <C-d> <Del>
 " Smart j/k (move by display lines unless a count is provided)
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
-
-" Left/right keys jump line breaks
-nnoremap <Left> <Backspace>
-nnoremap <Right> <Space>
-inoremap <Left> <C-o><Backspace>
-inoremap <Right> <C-o><Space>
-xnoremap <Left> <Backspace>
-xnoremap <Right> <Space>
 
 " MISCELLANEOUS
 
