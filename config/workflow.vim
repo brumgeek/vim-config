@@ -27,32 +27,46 @@ set hidden                        " Keep buffers alive when abandoned
 " * FILE MANIPULATION *
 " *********************
 
-function! MoveFile(dest)
-   let source = expand('%:p')
-   let source_path = fnamemodify(source, ':h')
-   let target = fnamemodify(a:dest, ':p')
-   let target_path = fnamemodify(target, ':h')
+function! MoveFile(dest, bang)
+   let l:source = expand('%:p')
+   let l:source_path = fnamemodify(l:source, ':h')
+   let l:target = fnamemodify(a:dest, ':p')
+   let l:target_path = fnamemodify(l:target, ':h')
+   let l:status = 1
 
-   if !isdirectory(target_path)
-     echoerr target_path . ": No such directory"
-     return 0
+   if bufexists(l:target)
+     if (a:bang ==# '!')
+       exec 'bwipe!' . bufnr(l:target)
+     else
+       echoerr "File is loaded in another buffer (add ! to override)"
+       return 0
+     endif
    endif
 
-   if (source == target || 
-     \ source_path . '/' == target )
-     return 0
+   if !isdirectory(l:target_path)
+     if (a:bang ==# '!')
+       exec '!mkdir -p ' . l:target_path
+     elseif
+       echoerr l:target_path . ": No such directory"
+       return 0
+     endif
    endif
 
-   if (isdirectory(target))
-     exe 'sav' fnameescape(target) . expand('%:t')
+   if (isdirectory(l:target))
+     exe 'saveas' . a:bang . fnameescape(l:target) . expand('%:t')
+     let l:status = 0
    else
-     exe 'sav' fnameescape(target)
+     exe 'saveas' . a:bang . fnameescape(l:target)
+     let l:status = 0
    endif
 
-   call delete(source)
+   call delete(l:source)
+   exec 'bwipe!' . bufnr(l:source)
+
+   return l:status
 endfunction
 
-command! -nargs=1 -complete=file -bar Mv call MoveFile('<args>')
+command! -nargs=1 -complete=file -bar -bang Mv call MoveFile('<args>', '<bang>')
 
 " *****************
 " * FILE METADATA *
@@ -81,10 +95,7 @@ set breakindent                   " Indent whole paragraph, not just first line
 set ignorecase                    " Search with
 set smartcase                     " smart case recognition
 
-set wildignore+=*tmp/*,*.zip      " Basic exclusions from wildcard expansion
-if has('mac')                     " ...and default directories on a Mac
-  set wildignore+=*Applications/*,*Library/*,*Music/*,*Movies/*,*Pictures/*
-endif
+set wildignore+=*/tmp/*,*.zip,*.swp,*.so
 
 " %% = working directory of current buffer
 cabbr <expr> %% fnameescape(expand('%:p:h'))
