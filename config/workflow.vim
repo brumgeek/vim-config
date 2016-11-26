@@ -35,7 +35,7 @@ function! MoveFile(dest, bang)
    let l:status = 1
 
    if bufexists(l:target)
-     if (a:bang ==# '!')
+     if (a:bang == '!')
        exec 'bwipe!' . bufnr(l:target)
      else
        echoerr "File is loaded in another buffer (add ! to override)"
@@ -44,7 +44,7 @@ function! MoveFile(dest, bang)
    endif
 
    if !isdirectory(l:target_path)
-     if (a:bang ==# '!')
+     if (a:bang == '!')
        exec '!mkdir -p ' . l:target_path
      elseif
        echoerr l:target_path . ": No such directory"
