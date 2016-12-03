@@ -36,6 +36,8 @@ nnoremap <Leader>p "*p
 nnoremap <Leader>P "*P
 nnoremap <Leader>y "*y
 nnoremap <Leader>Y "*y$
+nnoremap <Leader>d "*d
+nnoremap <Leader>D "*D
  if has('mac')
    inoremap <D-v> <C-o>"*p
  elseif has('win32')
@@ -45,6 +47,8 @@ vnoremap <Leader>p "*p
 vnoremap <Leader>P "*P
 vnoremap <Leader>y "*y
 vnoremap <Leader>Y "*y$
+vnoremap <Leader>d "*d
+vnoremap <Leader>D "*D
 
 " Easy whitespace
 nnoremap <Leader>k m`O<Esc>``
