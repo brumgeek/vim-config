@@ -52,10 +52,10 @@ function! ToHeader(level)
                 normal i-
             endif
         endif
-    elseif (getline(line('.') - 1) !~ '^\w*$'
-                 \ || getline('.') =~ '^\w*$') " This line blank / Prev line not?
+    elseif (getline(line('.') - 1) !~ '^\s*$'
+                 \ || getline('.') =~ '^\s*$') " This line blank / Prev line not?
         return 0
-    elseif getline('.') !~ '^\w*$'             " This line not blank?
+    elseif getline('.') !~ '^\s*$'             " This line not blank?
         if a:level == 1
             normal yypVr=
         elseif a:level == 2
@@ -64,7 +64,7 @@ function! ToHeader(level)
             normal I### 
         endif
     " else                                       " This line is blank?
-    "     if getline(line('.') - 1) !~ '^\w*$'   " Prev line is blank?
+    "     if getline(line('.') - 1) !~ '^\s*$'   " Prev line is blank?
     "         normal O
     "     endif
     "     if a:level == 1
@@ -76,7 +76,7 @@ function! ToHeader(level)
     "     endif
     endif
 
-    if getline(line('.') + 1) !~ '^\w*$'       " Next line is blank?
+    if getline(line('.') + 1) !~ '^\s*$'       " Next line is blank?
         normal o
     endif
 
