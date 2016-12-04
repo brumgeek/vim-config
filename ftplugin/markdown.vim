@@ -2,86 +2,52 @@
 nnoremap <buffer> <Leader>f :Goyo<CR>
 
 function! ToHeader(level)
+    let l:prevline = getline(line('.') - 1)
+    let l:thisline = getline('.')
+    let l:nextline = getline(line('.') + 1)
+    if a:level == 1
+        let l:hmarker = '='
+    elseif a:level == 2
+        let l:hmarker = '-'
+    endif
+
     normal m`
-    if getline(line('.') + 1) =~ '=\{3,}'      " Cursor on H1 text?
-        if a:level == 1
-            return 0
-        elseif a:level == 2
-            normal jVr-
-        elseif a:level == 3
-            normal jdd-I### 
+
+    if (l:prevline !~ '^\s*$' ||
+      \ l:thisline =~ '^\s*$')
+        return 0
+    elseif l:thisline.l:nextline =~ '[=-]\{3,}' " Cursor on H1-H2?
+        if l:nextline =~ '[=-]\{3,}' 
+            normal j 
         endif
-    elseif getline('.') =~ '=\{3,}'            " Cursor on H1 marker?
-        if a:level == 1
-            return 0
-        elseif a:level == 2
-            normal Vr-
+        if a:level < 3
+            exec 'normal Vr' . l:hmarker
         elseif a:level == 3
             normal dd-I### 
         endif
-    elseif getline(line('.') + 1) =~ '-\{3,}'  " Cursor on H2 text?
-        if a:level == 1
-            normal jVr=
-        elseif a:level == 2
-            return 0
-        elseif a:level == 3
-            normal jdd-I### 
-        endif
-    elseif getline('.') =~ '-\{3,}'            " Cursor on H2 marker?
-        if a:level == 1
-            normal Vr=
-        elseif a:level == 2
-            return 0
-        elseif a:level == 3
-            normal dd-I### 
-        endif
-    elseif getline('.') =~ '^#\{3,6}'          " Cursor on H3-H6?
-        if a:level == 1
+    elseif l:thisline =~ '^#\{3,6} \w'          " Cursor on H3-H6?
+        if a:level < 3
             s/^#\+ //
-            normal yypVr=
-        elseif a:level == 2
-            s/^#\+ //
-            normal yypVr-
+            let l:linelen = max([3, strlen(getline('.'))])
+            exec 'normal o' . repeat(l:hmarker, l:linelen)
         elseif a:level == 3
             s/^#\+/###/
         endif
-        if strlen(getline('.')) < 3
-            if a:level == 1
-                normal i=
-            elseif a:level == 2
-                normal i-
-            endif
-        endif
-    elseif (getline(line('.') - 1) !~ '^\s*$'
-                 \ || getline('.') =~ '^\s*$') " This line blank / Prev line not?
-        return 0
-    elseif getline('.') !~ '^\s*$'             " This line not blank?
-        if a:level == 1
-            normal yypVr=
-        elseif a:level == 2
-            normal yypVr-
+        nohlsearch
+    elseif (l:thisline =~ '^\w*$' && 
+          \ strlen(l:thisline) < 50)            " Cursor on regular text?
+        if a:level < 3
+            exec 'normal yypVr' . l:hmarker
         elseif a:level == 3
             normal I### 
         endif
-    " else                                       " This line is blank?
-    "     if getline(line('.') - 1) !~ '^\s*$'   " Prev line is blank?
-    "         normal O
-    "     endif
-    "     if a:level == 1
-    "         normal o===j
-    "     elseif a:level == 2
-    "         normal o---j
-    "     elseif a:level == 3
-    "         normal I### 
-    "     endif
     endif
 
-    if getline(line('.') + 1) !~ '^\s*$'       " Next line is blank?
+    if l:nextline !~ '^\s*$'                    " Force empty line below header
         normal o
     endif
 
-    nohlsearch
-    silent! normal ``
+    normal ``
 endfunction
 
 nnoremap <silent> <buffer> <Leader>h1 :call ToHeader(1)<CR>
