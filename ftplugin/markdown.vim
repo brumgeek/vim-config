@@ -72,7 +72,7 @@ function! ToHeader(level)
     exec l:thisline
 endfunction
 
-nnoremap <silent> <buffer> <Leader>h1 :call ToHeader(1)<CR>
-nnoremap <silent> <buffer> <Leader>h2 :call ToHeader(2)<CR>
-nnoremap <silent> <buffer> <Leader>h3 :call ToHeader(3)<CR>
+nnoremap <silent> <buffer> <Leader>H1 :call ToHeader(1)<CR>
+nnoremap <silent> <buffer> <Leader>H2 :call ToHeader(2)<CR>
+nnoremap <silent> <buffer> <Leader>H3 :call ToHeader(3)<CR>
 
