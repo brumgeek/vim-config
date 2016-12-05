@@ -1,53 +1,75 @@
 " Activate Goyo & Limelight
 nnoremap <buffer> <Leader>f :Goyo<CR>
 
-function! ToHeader(level)
-    let l:prevline = getline(line('.') - 1)
-    let l:thisline = getline('.')
-    let l:nextline = getline(line('.') + 1)
-    if a:level == 1
-        let l:hmarker = '='
-    elseif a:level == 2
-        let l:hmarker = '-'
+function! EmptyLine(action, relativecount)
+    if a:action !~ '\(add\|rm\)' || type(a:relativecount) != 0
+        return 0
     endif
 
-    normal m`
+    let l:thisline = line('.')
+    let l:prefix = a:relativecount > 0 ? '+' : ''
+    if a:action == 'add' && strlen(getline(line('.') + a:relativecount)) != 0
+        let l:newlinecmd = a:relativecount > 0 ? 'O' : 'o'
+        let l:thisline += a:relativecount > 0 ? 0 : 1
+        exec l:prefix . a:relativecount
+        exec 'normal ' . l:newlinecmd
+    elseif a:action == 'rm' && strlen(getline(line('.') + a:relativecount)) == 0
+        let l:thisline -= a:relativecount > 0 ? 0 : 1
+        exec l:prefix . a:relativecount
+        exec 'normal dd'
+    endif
+    exec l:thisline
+endfunction
 
-    if (l:prevline !~ '^\s*$' ||
-      \ l:thisline =~ '^\s*$')
+function! ToHeader(level)
+    let l:hmarker = a:level == 1 ? '=' : a:level == 2 ? '-' : '#'
+    let l:context = getline(line('.') - 1, line('.') + 1)
+    let l:thisline = line('.')
+
+    if line('.') == 1
+        call insert(l:context, '')
+    elseif line('.') >= line('$') - 1
         return 0
-    elseif l:thisline.l:nextline =~ '[=-]\{3,}' " Cursor on H1-H2?
-        if l:nextline =~ '[=-]\{3,}' 
-            normal j 
-        endif
+    endif
+
+    " Cursor on H1-H2
+    if join(l:context, '') =~ '[^=-][=-]\{3,}'
+        let l:prepos = l:context[2] =~ '[=-]\{3,}' ? '1j' : ''
         if a:level < 3
-            exec 'normal Vr' . l:hmarker
-        elseif a:level == 3
-            normal dd-I### 
+            exec 'normal ' . l:prepos . 'Vr' . l:hmarker
+        else
+            let l:thisline = l:context[1] =~ '[=-]\{3,}' ? l:thisline - 1 : l:thisline
+            exec 'normal ' . l:prepos . 'dd-I' . repeat(l:hmarker, a:level) . ' '
         endif
-    elseif l:thisline =~ '^#\{3,6} \w'          " Cursor on H3-H6?
+    " Cursor on H3-H6
+    elseif l:context[1] =~ '^#\{3,6}'
         if a:level < 3
             s/^#\+ //
             let l:linelen = max([3, strlen(getline('.'))])
             exec 'normal o' . repeat(l:hmarker, l:linelen)
-        elseif a:level == 3
-            s/^#\+/###/
+        else
+            exec 's/^#\+\s*/' . repeat(l:hmarker, a:level) . ' '
         endif
         nohlsearch
-    elseif (l:thisline =~ '^\w*$' && 
-          \ strlen(l:thisline) < 50)            " Cursor on regular text?
+    " Cursor on regular text
+    elseif join(l:context[0:1], '|') =~ '^|\w'
         if a:level < 3
             exec 'normal yypVr' . l:hmarker
-        elseif a:level == 3
-            normal I### 
+        else
+            exec 'normal I' . repeat(l:hmarker, a:level) . ' '
         endif
+    else
+        return 0
     endif
 
-    if l:nextline !~ '^\s*$'                    " Force empty line below header
-        normal o
+    if a:level < 3
+        call EmptyLine('add', -2)
+        call EmptyLine('add', +1)
+    else
+        call EmptyLine('add', -1)
+        call EmptyLine('rm', +1)
     endif
-
-    normal ``
+    exec l:thisline
 endfunction
 
 nnoremap <silent> <buffer> <Leader>h1 :call ToHeader(1)<CR>
