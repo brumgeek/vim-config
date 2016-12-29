@@ -13,7 +13,6 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'kana/vim-textobj-user' | Plug 'reedes/vim-textobj-quote'
 Plug 'pangloss/vim-javascript'
-Plug 'rakr/vim-two-firewatch'
 Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-commentary'
@@ -24,6 +23,9 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-surround'
+" Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
 
 call plug#end()
@@ -109,6 +111,15 @@ nnoremap <Leader>gs :Gstatus<CR>
 nnoremap <Leader>gw :Gwrite<CR>
 nnoremap <Leader>gc :Gcommit -m ""<Left>
 nnoremap <Leader>gp :Gpush<CR>
+
+" ***************
+" * VIM-AIRLINE *
+" ***************
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'solarized'
 
 " *************
 " * SYNTASTIC *
