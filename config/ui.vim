@@ -8,6 +8,7 @@ endif
 set number                  " Show line numbers...
 set relativenumber          "   ...relative to current line.
 set hlsearch                " Highlight search matches
+let &colorcolumn=join(range(81,999),",")
 
 " iTerm2 settings
 if $TERM_PROGRAM =~ "iTerm"
