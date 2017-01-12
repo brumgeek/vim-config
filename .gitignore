@@ -1,3 +1,5 @@
-viminfo
-.netrwhist
+/viminfo
+/.netrwhist
+/plugged/
+
 
