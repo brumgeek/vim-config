@@ -5,6 +5,7 @@
 call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
+Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'gioele/vim-autoswap'
 Plug 'jaxbot/browserlink.vim'
@@ -52,11 +53,11 @@ let s:delay_interval = '1000m'
 let s:bl_pagefileexts  = 
       \ [ 'html' , 'js'     , 'php'  ,
       \   'css'  , 'scss'   , 'sass' ,
-      \   'slim' , 'liquid' , 'md'     ]
+      \   'slim' , 'liquid' , 'md'   , 'erb' ]
 
 function! s:setupHandlers()
   let s:path_flag = '%:p:h' | let s:this_path = expand(s:path_flag)
-  if !(s:this_path =~ '_site') 
+  if !(s:this_path =~? '_site') 
     while s:this_path != $HOME 
       if !empty(globpath(s:this_path,'_config.yml')) 
         exec 'sleep ' . s:delay_interval | break 
@@ -65,7 +66,7 @@ function! s:setupHandlers()
     endwhile 
   endif 
   :BLReloadPage 
-  if expand('%:e:e') =~ 'css' 
+  if expand('%:e:e') =~? 'css' 
     :BLReloadCSS 
   endif
 endfunction
@@ -78,8 +79,11 @@ exec 'autocmd BufWritePost ' . '*.' . join(s:bl_pagefileexts,',*.') . ' call s:s
 
 let g:limelight_default_coefficient = 0.7   " Set deeper default shading
 
-autocmd! User GoyoEnter Limelight           " Tie Limelight to Goyo
-autocmd! User GoyoLeave Limelight!
+augroup goyo
+  autocmd!
+  autocmd User GoyoEnter Limelight           " Tie Limelight to Goyo
+  autocmd User GoyoLeave Limelight!
+augroup END
 
 " ******************
 " * VIM-EASY-ALIGN *
@@ -125,15 +129,17 @@ let g:airline_theme = 'solarized'
 " * SYNTASTIC *
 " *************
 
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_vim_checkers = ['vint']
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 " nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 

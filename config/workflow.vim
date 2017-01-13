@@ -5,13 +5,13 @@
 " * ENVIRONMENT PERSISTENCE *
 " ***************************
 
-if &viminfo !~ ',n'               " Store viminfo within .vim/
-  let &viminfo .= ',n'.fnamemodify(expand("$MYVIMRC"),":p:h").'/viminfo'
+if &viminfo !~# ',n'               " Store viminfo within .vim/
+  let &viminfo .= ',n'.fnamemodify(expand('$MYVIMRC'),':p:h').'/viminfo'
 endif
 
 if has('persistent_undo')         " Store vimundo within .vim/
     set undolevels=5000
-    let &undodir = fnamemodify(expand("$MYVIMRC"),":p:h").'/vimundo'
+    let &undodir = fnamemodify(expand('$MYVIMRC'),':p:h').'/vimundo'
     set undofile
 endif
 
@@ -35,19 +35,19 @@ function! MoveFile(dest, bang)
    let l:status = 1
 
    if bufexists(l:target)
-     if (a:bang == '!')
+     if (a:bang ==# '!')
        exec 'bwipe!' . bufnr(l:target)
      else
-       echoerr "File is loaded in another buffer (add ! to override)"
+       echoerr 'File is loaded in another buffer (add ! to override)'
        return 0
      endif
    endif
 
    if !isdirectory(l:target_path)
-     if (a:bang == '!')
+     if (a:bang ==# '!')
        exec '!mkdir -p ' . l:target_path
-     elseif
-       echoerr l:target_path . ": No such directory"
+     else
+       echoerr l:target_path . ': No such directory'
        return 0
      endif
    endif

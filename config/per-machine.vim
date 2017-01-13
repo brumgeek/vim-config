@@ -1,5 +1,5 @@
 " Reset colorscheme on seedbox
-if hostname() =~ "porphyrion"
+if hostname() =~# 'porphyrion'
   colorscheme default
 endif
 
