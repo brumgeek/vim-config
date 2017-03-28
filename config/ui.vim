@@ -2,13 +2,18 @@
 
 syntax on                   " Enable syntax highlighting...
 if !has('gui_running')
-  colorscheme solarized       "   ...and custom color scheme...
+  colorscheme solarized     "   ...and custom color scheme...
   set background=dark       "   ...and light/dark variation.
 endif
 set number                  " Show line numbers...
 set relativenumber          "   ...relative to current line.
 set hlsearch                " Highlight search matches
-let &colorcolumn=join(range(81,999),',')
+
+augroup colorcolumn
+  autocmd!
+  autocmd FileType ruby,sh,vim,css,scss,javascript
+        \ let &l:colorcolumn=join(range(81,999),',')
+augroup END
 
 " iTerm2 settings
 if $TERM_PROGRAM =~# 'iTerm'
@@ -21,4 +26,3 @@ if $TERM_PROGRAM =~# 'iTerm'
   " Italicize comments
   highlight Comment cterm=italic
 endif
-

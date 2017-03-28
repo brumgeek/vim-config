@@ -20,8 +20,11 @@ endif
 " ********************
 
 set nobackup                      " Disable auto-backup when overwriting files
-set noswapfile                    " Disable autosave
 set hidden                        " Keep buffers alive when abandoned
+set directory^=$HOME/.vim/swap/   " Store all swap files together
+
+" Force backups to be copied from original, not renamed
+set backupcopy=yes
 
 " *********************
 " * FILE MANIPULATION *
@@ -109,4 +112,3 @@ cabbr <expr> %% fnameescape(expand('%:p:h'))
 " set foldlevelstart=5
 " set foldmethod=indent
 " set foldnestmax=10
-

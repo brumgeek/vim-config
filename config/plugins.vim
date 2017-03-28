@@ -4,17 +4,19 @@
 
 call plug#begin()
 
+Plug 'aklt/plantuml-syntax'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ap/vim-css-color'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'danilo-augusto/vim-afterglow'
 Plug 'gioele/vim-autoswap'
 Plug 'jaxbot/browserlink.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-dirvish'
 Plug 'kana/vim-textobj-user' | Plug 'reedes/vim-textobj-quote'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -37,7 +39,8 @@ call plug#end()
 " *********
 
 let g:ctrlp_working_path_mode = 'ra'
-" let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp'
+
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
 endif
@@ -50,29 +53,31 @@ endif
 let g:bl_no_autoupdate = 1
 
 " ...in lieu of custom event handler to force delay inside Jekyll directories.
-let s:delay_interval = '1000m'
+let s:delay_interval = '1500m'
 let s:bl_pagefileexts  = 
       \ [ 'html' , 'js'     , 'php'  ,
       \   'css'  , 'scss'   , 'sass' ,
-      \   'slim' , 'liquid' , 'md'   , 'erb' ]
+      \   'slim' , 'liquid' , 'md'     ]
 
 function! s:setupHandlers()
   let s:path_flag = '%:p:h' | let s:this_path = expand(s:path_flag)
-  if !(s:this_path =~? '_site') 
-    while s:this_path != $HOME 
-      if !empty(globpath(s:this_path,'_config.yml')) 
-        exec 'sleep ' . s:delay_interval | break 
-      endif 
-      let s:path_flag .= ':h' | let s:this_path = expand(s:path_flag) 
-    endwhile 
-  endif 
-  :BLReloadPage 
+  while s:this_path != $HOME 
+    if !empty(globpath(s:this_path,'_config.yml')) 
+      exec 'sleep ' . s:delay_interval | break 
+    endif 
+    let s:path_flag .= ':h' | let s:this_path = expand(s:path_flag) 
+  endwhile 
   if expand('%:e:e') =~? 'css' 
     :BLReloadCSS 
+  else
+    :BLReloadPage 
   endif
 endfunction
 
-exec 'autocmd BufWritePost ' . '*.' . join(s:bl_pagefileexts,',*.') . ' call s:setupHandlers()'
+augroup browserlink
+  autocmd!
+  exec 'autocmd BufWritePost *.' . join(s:bl_pagefileexts,',*.') . ' call s:setupHandlers()'
+augroup END
 
 " *************
 " * LIMELIGHT *
@@ -80,7 +85,7 @@ exec 'autocmd BufWritePost ' . '*.' . join(s:bl_pagefileexts,',*.') . ' call s:s
 
 let g:limelight_default_coefficient = 0.7   " Set deeper default shading
 
-augroup goyo
+augroup goyo_ll
   autocmd!
   autocmd User GoyoEnter Limelight           " Tie Limelight to Goyo
   autocmd User GoyoLeave Limelight!
@@ -95,6 +100,21 @@ xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" ***************
+" * VIM-DIRVISH *
+" ***************
+
+" Disable netrw
+let g:loaded_netrwPlugin = 1
+
+" Re-enable netrw's `gx` command
+nnoremap gx :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())<cr>
+
+augroup dirvish
+  autocmd!
+  autocmd FileType dirvish silent g/.DS_Store/d    " Hide .DS_Store
+augroup END
 
 " *********************
 " * VIM-TEXTOBJ-QUOTE *
@@ -124,6 +144,7 @@ nnoremap <Leader>gp :Gpush<CR>
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline_theme = 'solarized'
 
 " *************
@@ -131,24 +152,19 @@ let g:airline_theme = 'solarized'
 " *************
 
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_slim_checkers = ['slim_lint']
 let g:syntastic_vim_checkers = ['vint']
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-" nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+let g:syntastic_scss_checkers = ['sass_lint']
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [],'passive_filetypes': [''] }
 
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+" per https://github.com/Kuniwak/vint/issues/198
+let g:syntastic_vim_vint_exe = 'LC_CTYPE=UTF-8 vint'
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Close location list (i.e., error list) on :bd
-cabbrev <silent> bd <C-r>=(getcmdtype()==#':' && getcmdpos()==1 ? 'lclose\|bdelete' : 'bd')<CR>
+" " Close location list (i.e., error list) on :bd
+" cabbrev <silent> bd <C-r>=(getcmdtype()==#':' && getcmdpos()==1 ? 'lclose\|bdelete' : 'bd')<CR>
 
-augroup syntastic
-  autocmd!
-  autocmd BufWritePost *.rb,*.vim SyntasticCheck
-augroup END
-
+nnoremap <Leader>sc :SyntasticCheck<CR>
+nnoremap <Leader>st :SyntasticToggleMode<CR>

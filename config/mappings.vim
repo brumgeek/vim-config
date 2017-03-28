@@ -68,7 +68,7 @@ endfor
 " BUFFER MANAGEMENT
 " Save
 nnoremap <Leader>w :update<CR>
-vnoremap <Leader>w <C-c>:update<CR>gv
+nnoremap <Leader>W :wa<CR>
 
 " UI & WINDOW MANAGEMENT
 " Enable full-screen on Windows
@@ -77,11 +77,12 @@ if has('win32')
 endif
 
 " " One-press window switching
-" nnoremap <Tab> <C-w>w
-" nnoremap <S-Tab> <C-w>W
+nnoremap <Tab> <C-w>w
+nnoremap <S-Tab> <C-w>W
 
 " FILE MANAGEMENT
 nnoremap <Leader>en :e ~/Documents/Notes/**/
+nnoremap <Leader>eb :e ~/Projects/rlue.github.io/_drafts/**
 
 " NAVIGATION
 " in Command Mode, from http://stackoverflow.com/a/6923282/4865822
@@ -99,6 +100,16 @@ cnoremap <C-d> <Del>
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
+" Find cursor
+nnoremap <silent> <Leader><Space> :call FlashLine()<CR>
+function! FlashLine()
+  for i in [30, 50, 30, 250]
+    set cursorline!
+    exec 'sleep ' . i . 'm'
+    redraw
+  endfor
+endfunction
+
 " MISCELLANEOUS
 
 " Enable linewise repeat commands (via `.`) in Visual Mode
@@ -110,4 +121,3 @@ nnoremap Q <Nop>
 
 " Switch from Search to Replace super fast!
 " nmap <expr> M ':%s/' . @/ . '//g<LEFT><LEFT>'
-

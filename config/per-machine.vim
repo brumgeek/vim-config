@@ -17,4 +17,3 @@ endif
 " else
 "     :cd $HOME/
 " endif
-
