@@ -1,8 +1,9 @@
 " This file contains adjustments to visual elements of the vim interface.
 
 syntax on                   " Enable syntax highlighting...
+set synmaxcol=200           "   ...but limit on very long lines.
 if !has('gui_running')
-  colorscheme solarized     "   ...and custom color scheme...
+  colorscheme solarized     " Set custom color scheme...
   set background=dark       "   ...and light/dark variation.
 endif
 set number                  " Show line numbers...
@@ -26,3 +27,13 @@ if $TERM_PROGRAM =~# 'iTerm'
   " Italicize comments
   highlight Comment cterm=italic
 endif
+
+" **********************
+" * INTERFACE BEHAVIOR *
+" **********************
+
+set splitbelow                    " Open new windows below...
+set splitright                    "   ...or to the right of the current buffer.
+
+set linebreak                     " Wrap at word boundaries (and not textwidth)
+set breakindent                   " Indent whole paragraph, not just first line

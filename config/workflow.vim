@@ -81,16 +81,6 @@ filetype plugin indent on         " Enable filetype detection for automatic
 set encoding=utf-8                " Set Unicode
 set fileformats=unix,dos,mac      " Order of preferred file formats
 
-" **********************
-" * INTERFACE BEHAVIOR *
-" **********************
-
-set splitbelow                    " Open new windows below...
-set splitright                    "   ...or to the right of the current buffer.
-
-set linebreak                     " Wrap at word boundaries (and not textwidth)
-set breakindent                   " Indent whole paragraph, not just first line
-
 " ************************
 " * COMMAND LINE OPTIONS *
 " ************************
@@ -102,6 +92,16 @@ set wildignore+=*/tmp/*,*.zip,*.swp,*.so
 
 " %% = working directory of current buffer
 cabbr <expr> %% fnameescape(expand('%:p:h'))
+
+" ******************
+" * EXTERNAL TOOLS *
+" ******************
+
+call system('type ag')
+if v:shell_error == 0
+  set grepprg=ag\ --vimgrep\ $*
+  set grepformat=%f:%l:%c:%m
+endif
 
 " ***********
 " * FOLDING *

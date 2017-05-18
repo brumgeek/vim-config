@@ -5,10 +5,10 @@ colorscheme solarized
 set bg=light
 set lines=999 columns=85
 
-if hostname() =~ "sardanapalus"
-  set guifont=Source\ Code\ Pro\ Light:h19
-elseif hostname() =~ "liberte"
-  set guifont=Source\ Code\ Pro:h20
+if hostname() =~# 'sardanapalus'
+  set guifont=Source\ Code\ Pro\ Light:h17
+elseif hostname() =~# 'liberte'
+  set guifont=Source\ Code\ Pro:h17
 else
   set guifont=Source\ Code\ Pro\ Light:h18
 endif

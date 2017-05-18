@@ -2,13 +2,24 @@
 " * VIM-PLUG *
 " ************
 
+" Automatically install and run if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  augroup vimPlug
+    autocmd!
+    autocmd VimEnter * PlugInstall | source $MYVIMRC
+  augroup END
+endif
+
 call plug#begin()
 
 Plug 'aklt/plantuml-syntax'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ap/vim-css-color'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 Plug 'danilo-augusto/vim-afterglow'
+Plug 'felipec/notmuch-vim'
 Plug 'gioele/vim-autoswap'
 Plug 'jaxbot/browserlink.vim'
 Plug 'junegunn/goyo.vim'
@@ -31,19 +42,20 @@ Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-syntastic/syntastic'
+" Plug 'w0rp/ale'
 
 call plug#end()
 
-" *********
-" * CTRLP *
-" *********
+" " *********
+" " * CTRLP *
+" " *********
 
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp'
+" let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_cache_dir = $HOME . '/.vim/ctrlp'
 
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
-endif
+" if executable('ag')
+"   let g:ctrlp_user_command = 'ag %s --nocolor -g ""'
+" endif
 
 " ***************
 " * BROWSERLINK *
@@ -125,6 +137,14 @@ augroup textobj_quote
   autocmd FileType markdown call textobj#quote#init()
   autocmd FileType text     call textobj#quote#init()
 augroup END
+
+" *******
+" * ACK *
+" *******
+
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " ****************
 " * VIM-FUGITIVE *
